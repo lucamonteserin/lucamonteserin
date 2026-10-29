@@ -642,13 +642,17 @@ tailwind.config = {
       if (tipoCobertura === 'ambos') {
         btnSes1.disabled = true;
         btnSes1.setAttribute('aria-disabled', 'true');
-        btnSes1.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400');
-        btnSes1.classList.add('opacity-40', 'cursor-not-allowed');
+        btnSes1.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnSes1.classList.add('text-white', 'opacity-40', 'cursor-not-allowed');
 
         if (sesiones === 1) {
-          btnSes.forEach(b => b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400'));
+          btnSes.forEach(b => {
+            b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+            b.classList.add('text-white');
+          });
           btnSes.forEach(b => b.setAttribute('aria-pressed', 'false'));
-          btnSes2.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+          btnSes2.classList.remove('text-white');
+          btnSes2.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
           btnSes2.setAttribute('aria-pressed', 'true');
           sesiones = 2;
         }
@@ -664,12 +668,14 @@ tailwind.config = {
         btnXPhoto.setAttribute('aria-disabled', 'true');
         btnExpress.setAttribute('aria-disabled', 'true');
         extraFotoUSD = 0;
-        btnXPhoto.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        btnXPhoto.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnXPhoto.classList.add('text-white');
         btnXPhoto.setAttribute('aria-pressed', 'false');
         btnXPhoto.classList.add('opacity-40', 'cursor-not-allowed');
 
         extraExpressUSD = 0;
-        btnExpress.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        btnExpress.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnExpress.classList.add('text-white');
         btnExpress.setAttribute('aria-pressed', 'false');
         btnExpress.classList.add('opacity-40', 'cursor-not-allowed');
       } else {
@@ -689,17 +695,20 @@ tailwind.config = {
         btnLive.setAttribute('aria-disabled', 'true');
         btnDrone.setAttribute('aria-disabled', 'true');
         extraVideoUSD = 0;
-        btnXVideo.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        btnXVideo.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnXVideo.classList.add('text-white');
         btnXVideo.setAttribute('aria-pressed', 'false');
         btnXVideo.classList.add('opacity-40', 'cursor-not-allowed');
 
         extraLiveUSD = 0;
-        btnLive.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        btnLive.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnLive.classList.add('text-white');
         btnLive.setAttribute('aria-pressed', 'false');
         btnLive.classList.add('opacity-40', 'cursor-not-allowed');
 
         extraDroneUSD = 0;
-        btnDrone.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        btnDrone.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnDrone.classList.add('text-white');
         btnDrone.setAttribute('aria-pressed', 'false');
         btnDrone.classList.add('opacity-40', 'cursor-not-allowed');
       } else {
@@ -862,9 +871,13 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-ev');
         if (!targetBtn) return;
-        btnEvs.forEach(b => b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400'));
+        btnEvs.forEach(b => {
+          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+          b.classList.add('text-white');
+        });
         btnEvs.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        targetBtn.classList.remove('text-white');
+        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
         tipoEvento = targetBtn.getAttribute('data-ev');
 
         if (tipoEvento === 'graduacion') {
@@ -888,10 +901,12 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-grad-opt');
         if (!targetBtn) return;
-        targetBtn.classList.toggle('bg-amber-400');
-        targetBtn.classList.toggle('text-zinc-950');
-        targetBtn.classList.toggle('border-amber-400');
-        targetBtn.setAttribute('aria-pressed', String(targetBtn.classList.contains('bg-amber-400')));
+        const activo = targetBtn.classList.toggle('bg-amber-400');
+        targetBtn.classList.toggle('text-zinc-950', activo);
+        targetBtn.classList.toggle('border-amber-400', activo);
+        targetBtn.classList.toggle('font-bold', activo);
+        targetBtn.classList.toggle('text-white', !activo);
+        targetBtn.setAttribute('aria-pressed', String(activo));
         calcular();
       });
     });
@@ -900,9 +915,13 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-cob');
         if (!targetBtn) return;
-        btnCobs.forEach(b => b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400'));
+        btnCobs.forEach(b => {
+          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+          b.classList.add('text-white');
+        });
         btnCobs.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        targetBtn.classList.remove('text-white');
+        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
         tarifaPorHoraUSD = parseInt(targetBtn.getAttribute('data-tarifa'));
         tipoCobertura = targetBtn.getAttribute('data-tipo');
         actualizarDisponibilidad();
@@ -914,9 +933,13 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-hr');
         if (!targetBtn) return;
-        btnHrs.forEach(b => b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400'));
+        btnHrs.forEach(b => {
+          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+          b.classList.add('text-white');
+        });
         btnHrs.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        targetBtn.classList.remove('text-white');
+        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
         horas = parseInt(targetBtn.getAttribute('data-horas'));
         calcular();
       });
@@ -930,9 +953,13 @@ tailwind.config = {
 
         if (tipoCobertura === 'ambos' && valSesion === 1) return;
 
-        btnSes.forEach(b => b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400'));
+        btnSes.forEach(b => {
+          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+          b.classList.add('text-white');
+        });
         btnSes.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
+        targetBtn.classList.remove('text-white');
+        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
         sesiones = valSesion;
         calcular();
       });
@@ -943,6 +970,8 @@ tailwind.config = {
       const activo = btnXPhoto.classList.toggle('bg-amber-400');
       btnXPhoto.classList.toggle('text-zinc-950', activo);
       btnXPhoto.classList.toggle('border-amber-400', activo);
+      btnXPhoto.classList.toggle('font-bold', activo);
+      btnXPhoto.classList.toggle('text-white', !activo);
       btnXPhoto.setAttribute('aria-pressed', String(activo));
       extraFotoUSD = activo ? parseInt(btnXPhoto.getAttribute('data-val')) : 0;
       calcular();
@@ -953,6 +982,8 @@ tailwind.config = {
       const activo = btnXVideo.classList.toggle('bg-amber-400');
       btnXVideo.classList.toggle('text-zinc-950', activo);
       btnXVideo.classList.toggle('border-amber-400', activo);
+      btnXVideo.classList.toggle('font-bold', activo);
+      btnXVideo.classList.toggle('text-white', !activo);
       btnXVideo.setAttribute('aria-pressed', String(activo));
       extraVideoUSD = activo ? parseInt(btnXVideo.getAttribute('data-val')) : 0;
       calcular();
@@ -963,6 +994,8 @@ tailwind.config = {
       const activo = btnExpress.classList.toggle('bg-amber-400');
       btnExpress.classList.toggle('text-zinc-950', activo);
       btnExpress.classList.toggle('border-amber-400', activo);
+      btnExpress.classList.toggle('font-bold', activo);
+      btnExpress.classList.toggle('text-white', !activo);
       btnExpress.setAttribute('aria-pressed', String(activo));
       extraExpressUSD = activo ? parseInt(btnExpress.getAttribute('data-val')) : 0;
       calcular();
@@ -973,6 +1006,8 @@ tailwind.config = {
       const activo = btnLive.classList.toggle('bg-amber-400');
       btnLive.classList.toggle('text-zinc-950', activo);
       btnLive.classList.toggle('border-amber-400', activo);
+      btnLive.classList.toggle('font-bold', activo);
+      btnLive.classList.toggle('text-white', !activo);
       btnLive.setAttribute('aria-pressed', String(activo));
       extraLiveUSD = activo ? parseInt(btnLive.getAttribute('data-val')) : 0;
       calcular();
@@ -983,6 +1018,8 @@ tailwind.config = {
       const activo = btnDrone.classList.toggle('bg-amber-400');
       btnDrone.classList.toggle('text-zinc-950', activo);
       btnDrone.classList.toggle('border-amber-400', activo);
+      btnDrone.classList.toggle('font-bold', activo);
+      btnDrone.classList.toggle('text-white', !activo);
       btnDrone.setAttribute('aria-pressed', String(activo));
       extraDroneUSD = activo ? parseInt(btnDrone.getAttribute('data-val')) : 0;
       calcular();
@@ -1001,14 +1038,20 @@ tailwind.config = {
     });
 
     window.addEventListener('load', () => {
-      btnEvs[0].classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
-      btnCobs[0].classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
-      btnHrs[0].classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
-      btnSes[0].classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400');
-      btnEvs.forEach(b => b.setAttribute('aria-pressed', String(b === btnEvs[0])));
-      btnCobs.forEach(b => b.setAttribute('aria-pressed', String(b === btnCobs[0])));
-      btnHrs.forEach(b => b.setAttribute('aria-pressed', String(b === btnHrs[0])));
-      btnSes.forEach(b => b.setAttribute('aria-pressed', String(b === btnSes[0])));
+      const activarBotonInicial = (grupo) => {
+        const primero = grupo[0];
+        if (primero) {
+          primero.classList.remove('text-white');
+          primero.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+          primero.setAttribute('aria-pressed', 'true');
+        }
+      };
+
+      activarBotonInicial(btnEvs);
+      activarBotonInicial(btnCobs);
+      activarBotonInicial(btnHrs);
+      activarBotonInicial(btnSes);
+
       document.querySelectorAll('.btn-grad-opt, .btn-eq, .btn-add').forEach(b => {
         b.setAttribute('aria-pressed', 'false');
       });

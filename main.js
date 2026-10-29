@@ -496,6 +496,35 @@ if (sliderSection && track) {
 }
 
 // ==========================================================================
+  // Inicialización General y Listeners del Cotizador
+  // ==========================================================================
+  
+  // NUEVO: Interceptar clics en enlaces internos para evitar el #hash en la URL
+  document.addEventListener('click', e => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    
+    const targetId = anchor.getAttribute('href');
+    if (targetId === '#' || !targetId) return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      e.preventDefault(); // Evita que se agregue el # a la barra de direcciones
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+
+  setTimeout(() => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }, 50);
+});
+
+// ==========================================================================
 // 8. Inicialización General y Listeners del Cotizador
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {

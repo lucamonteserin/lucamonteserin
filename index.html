@@ -19,12 +19,19 @@
   
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.lucamonteserin.com.ar/">
-  <meta property="og:title" content="Luca Monteserin | Fotografía y video de eventos">
+  <meta property="og:title" content="Luca Monteserin | Fotografía y Filmación">
   <meta property="og:description" content="Fotografía y filmación de quinceaños, bodas y graduaciones. Descubrí trabajos recientes y armá una cotización para tu evento.">
-  <meta property="og:image" content="https://www.lucamonteserin.com.ar/DSC_8284.png">
-  <link rel="stylesheet" href="styles.css">  
-  <link rel="icon" type="image/svg+xml" href="logo.svg">
-  <link rel="preconnect" href="https://cdn.picflow.com" crossorigin>
+  <meta property="og:image" content="https://www.lucamonteserin.com.ar/portada.jpg">
+  <link rel="stylesheet" href="styles.css">  
+  
+  <!-- Nuevos Favicons y Manifiesto -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://cdn.picflow.com" crossorigin>
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,6 +44,7 @@
     "sameAs": ["https://instagram.com/lucamonteserin"]
   }
   </script>
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,8 +82,8 @@ tailwind.config = {
       <img src="logo.svg" alt="Logo Luca Monteserin" class="h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-xs tracking-widest text-slate-200 font-medium" aria-label="Principal">
-      <a class="nav-link" href="#proyectos">Trabajos</a>
-      <a class="nav-link" href="galeria.html">Galería completa</a>
+      <a class="nav-link" href="#proyectos">Destacados</a>
+      <a class="nav-link" href="galeria.html">Galería</a>
       <a class="nav-link" href="equipo.html">Equipo</a>
       <a class="nav-link" href="#presupuesto-seccion">Presupuesto</a>
       <a class="nav-link" href="#contacto">Contacto</a>
@@ -86,8 +94,8 @@ tailwind.config = {
     </div>
   </div>
   <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden lg:hidden glass-panel px-6 py-6 space-y-4 text-sm font-medium tracking-widest">
-    <a href="#proyectos" class="block">Trabajos</a>
-    <a href="galeria.html" class="block">Galería completa</a>
+    <a href="#proyectos" class="block">Destacados</a>
+    <a href="galeria.html" class="block">Galería</a>
     <a href="equipo.html" class="block">Equipo</a>
     <a href="#presupuesto-seccion" class="block">Presupuesto</a>
     <a href="#contacto" class="block">Contacto</a>
@@ -264,7 +272,7 @@ tailwind.config = {
         <div class="flex justify-between items-center border-b border-zinc-800 pb-4">
           <h3 class="text-xl md:text-2xl font-bold flex items-center gap-2 text-white">
             <i data-lucide="calculator" class="w-6 h-6 text-amber-400"></i>
-            Cotizador de Servicios
+            Presupuestador
           </h3>
           <span id="dolar-label" class="text-[11px] text-zinc-500 font-mono bg-zinc-950 px-2.5 py-1 rounded-lg border border-zinc-800">Dólar oficial: cargando...</span>
         </div>

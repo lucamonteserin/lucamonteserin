@@ -2,7 +2,6 @@
 Luca Monteserin | PH + VIDEO - Estilos Globales (Opaco y Estable)
 ========================================================================== */
 
-/* Secciones con fondo sólido obligatorio para evitar transparencias o texto fantasma */
 section:not(#hero) {
 position: relative;
 z-index: 20;
@@ -36,7 +35,6 @@ background: rgba(215, 191, 136, 0.75);
 color: #11100e;
 }
 
-/* Scrollbar personalizado */
 ::-webkit-scrollbar {
 width: 6px;
 }
@@ -51,7 +49,6 @@ border-radius: 9999px;
 background: var(--color-gold-500);
 }
 
-/* Efecto Spotlight de Proximidad */
 .spotlight-glow {
 pointer-events: none;
 position: fixed;
@@ -67,13 +64,11 @@ transition: opacity 0.3s ease;
 opacity: 0;
 }
 
-/* Enfoque accesible */
 :focus-visible {
 outline: 2px solid var(--color-gold-400);
 outline-offset: 3px;
 }
 
-/* Botón accesible para saltar al contenido */
 .skip {
 position: absolute;
 left: -999px;
@@ -89,12 +84,8 @@ font-weight: 700;
 left: 8px;
 }
 
-/* ==========================================================================
-Componentes Visuales (Glassmorphism & Gradientes)
-========================================================================== */
-
 .glass-panel {
-background: rgba(23, 21, 18, 0.95); /* Opacidad mayor para evitar transparencias */
+background: rgba(23, 21, 18, 0.95);
 backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(20px);
 border: 1px solid rgba(255, 255, 255, 0.07);
@@ -112,10 +103,6 @@ background: linear-gradient(135deg, #ffffff 0%, #e6c875 60%, #d4af37 100%);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
-
-/* ==========================================================================
-Header & Navegación
-========================================================================== */
 
 #main-header {
 transition: background 0.5s var(--ease), border-color 0.5s, backdrop-filter 0.5s, transform 0.4s var(--ease);
@@ -151,10 +138,6 @@ transition: right 0.4s var(--ease);
 right: 0;
 }
 
-/* ==========================================================================
-Hero & Slider
-========================================================================== */
-
 .hero-slide {
 position: absolute;
 inset: 0;
@@ -176,16 +159,11 @@ transition: transform 7s var(--ease);
 transform: scale(1);
 }
 
-/* Forzar tamaño amplio y flexible para el titulo.svg en la portada */
 #hero-content img[src="titulo.svg"] {
 max-width: 750px !important;
 width: 100% !important;
 height: auto !important;
 }
-
-/* ==========================================================================
-Animaciones Reveal
-========================================================================== */
 
 .reveal {
 opacity: 1;
@@ -221,10 +199,6 @@ transition: transform 1s var(--ease);
 transform: scale(1.05);
 }
 
-/* ==========================================================================
-Botones, Formularios y Utilidades
-========================================================================== */
-
 .btn {
 position: relative;
 overflow: hidden;
@@ -239,7 +213,6 @@ transform: translateY(-2px);
 transform: scale(0.98);
 }
 
-/* Modales y Lightboxes superpuestos */
 #video-modal,
 #img-modal,
 #lightbox {
@@ -292,11 +265,6 @@ color: #cbd5e1;
 margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-Efectos Neón, Animated Gradient Border & Dynamic Color (Material You)
-========================================================================== */
-
-/* 1. Animated Gradient Border (Para contenedores destacados) */
 @keyframes goldGradientMove {
 0% { background-position: 0% 50%; }
 50% { background-position: 100% 50%; }
@@ -316,7 +284,6 @@ animation: goldGradientMove 8s ease infinite;
 box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
-/* 2. Glow / Neon Border Effect (Botones de acción y elementos clave) */
 .btn-glow {
 position: relative;
 transition: all 0.3s var(--ease);
@@ -332,7 +299,6 @@ box-shadow: 0 0 15px rgba(230, 200, 117, 0.35), inset 0 0 10px rgba(212, 175, 55
 border-color: var(--color-gold-400) !important;
 }
 
-/* 3. Material You / Dynamic Color (Reacción fluida en filtros y opciones) */
 .opt {
 border: 1px solid rgba(255, 255, 255, 0.1);
 background: var(--color-warm-900);
@@ -348,7 +314,6 @@ font-weight: 700;
 box-shadow: 0 4px 16px rgba(185, 152, 86, 0.18) !important;
 }
 
-/* Editorial polish: quieter surfaces, clearer rhythm, and comfortable mobile controls. */
 #main-header .glass-panel {
 border-radius: 0 0 1.25rem 1.25rem;
 }

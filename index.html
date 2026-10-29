@@ -86,7 +86,7 @@ tailwind.config = {
 <header id="main-header" class="fixed top-0 z-50 w-full">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
     
-    <!-- Logo a la izquierda en desktop, estrictamente centrado solo en móvil -->
+    <!-- Logo a la izquierda en PC, centrado absoluto solo en móviles -->
     <a href="#hero" class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group flex-shrink-0" aria-label="Luca Monteserin, inicio">
       <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
@@ -119,24 +119,22 @@ tailwind.config = {
 
 <main id="main" class="flex-grow">
 
-<section id="hero" aria-labelledby="hero-title" class="relative min-h-[100vh] flex flex-col justify-center items-center pt-28 pb-20 sm:py-32 overflow-hidden z-0">
+<section id="hero" aria-labelledby="hero-title" class="relative h-screen min-h-[620px] max-h-[1000px] sticky top-0 flex flex-col justify-end pb-24 sm:pb-32 overflow-hidden z-0">
   <div class="absolute inset-0 bg-warm-950/20 z-10 pointer-events-none"></div>
   <div class="hero-slide active absolute inset-0"><img fetchpriority="high" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/e1875571-5311-439b-bd66-19c6c9047d96.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-100"></div>
   <div class="hero-slide absolute inset-0"><img data-src="https://cdn.picflow.com/assets/images/resized/1920x1280/de2e4144-1c3d-45a9-8927-5549316a09a9.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-100"></div>
   <div class="hero-slide absolute inset-0"><img data-src="https://cdn.picflow.com/assets/images/resized/1920x1282/bd353c7c-a68d-431a-a1e8-977f15f38376.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-100"></div>
   <div class="hero-slide absolute inset-0"><img data-src="https://cdn.picflow.com/assets/images/resized/1920x1280/823b0d6a-82d9-4295-86eb-fdbc1032ae43.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-100"></div>
   <div class="hero-slide absolute inset-0"><img data-src="https://cdn.picflow.com/assets/images/resized/1920x1282/e020b22a-029d-46b8-a903-6fddad5fabba.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-100"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/50 to-warm-950/20 z-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/40 to-warm-950/15 z-10"></div>
 
-  <div class="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 text-center my-auto">
+  <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
     <div id="hero-content" class="transition-opacity duration-200 ease-out flex flex-col items-center">
-      <h1 id="hero-title" class="w-full max-w-[90vw] sm:max-w-2xl mb-4 sm:mb-6">
-        <img src="titulo.svg" alt="Fotografía y filmación para tu gran noche" class="w-full h-auto object-contain drop-shadow-xl mx-auto max-h-[30vh] sm:max-h-none" />
-      </h1>
-      <p class="max-w-lg text-xs sm:text-base text-white/90 leading-relaxed px-3 mb-6">Servicio integral de Fotografía y Filmación de Quinceaños, Bodas y Graduaciones. ¿Planeamos el tuyo?</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-xs sm:max-w-none mx-auto">
-        <a href="#presupuesto-seccion" class="btn btn-glow w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 flex items-center justify-center gap-3"><i data-lucide="calculator" class="w-4 h-4"></i>Armar presupuesto</a>
-        <a href="galeria.html" class="btn w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-3"><i data-lucide="grid" class="w-4 h-4 text-gold-400"></i>Ver galería</a>
+      <h1 id="hero-title" class="w-full max-w-2xl mb-5"><img src="titulo.svg" alt="Fotografía y filmación para tu gran noche" class="w-full h-auto object-contain drop-shadow-lg" /></h1>
+      <p class="max-w-xl text-sm sm:text-base text-white/85 leading-relaxed">Servicio integral de Fotografía y Filmación de Quinceaños, Bodas y Graduaciones ¿Planeamos el tuyo?</p>
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#presupuesto-seccion" class="btn btn-glow w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 flex items-center justify-center gap-3"><i data-lucide="calculator" class="w-4 h-4"></i>Armar presupuesto</a>
+        <a href="galeria.html" class="btn w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-3"><i data-lucide="grid" class="w-4 h-4 text-gold-400"></i>Ver galería</a>
       </div>
     </div>
   </div>
@@ -276,61 +274,61 @@ tailwind.config = {
   </div>
 </section>
 
-<section id="presupuesto-seccion" class="relative py-16 sm:py-24 bg-warm-950 z-20 border-t border-white/5">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14 reveal">
+<section id="presupuesto-seccion" class="relative py-24 bg-warm-950 z-20 border-t border-white/5">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
       <h2 class="text-3xl sm:text-5xl font-bold text-white mb-3">Armá tu presupuesto</h2>
       <p class="text-slate-300 text-sm">Configurá tu cobertura y obtené un estimado de referencia al instante.</p>
     </div>
 
-    <!-- Diseño fluido a pantalla completa, sin tarjetas contenedoras pesadas -->
-    <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start reveal">
-      <div class="lg:col-span-7 space-y-8">
-        <div class="flex justify-between items-center border-b border-white/10 pb-4">
-          <h3 class="text-xl sm:text-2xl font-bold flex items-center gap-2 text-white">
+    <!-- Tarjeta en PC (lg:max-w-5xl lg:bg-zinc-900 lg:border lg:border-zinc-800 lg:p-8 lg:rounded-2xl lg:shadow-2xl) / Fluido a pantalla completa exclusivo en móviles (max-w-none w-full bg-transparent border-0 p-0 sm:bg-zinc-900...) -->
+    <div class="w-full max-w-none sm:max-w-5xl mx-auto bg-transparent sm:bg-zinc-900 border-0 sm:border sm:border-zinc-800 p-0 sm:p-8 rounded-none sm:rounded-2xl shadow-none sm:shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start reveal">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="flex justify-between items-center border-b border-white/10 sm:border-zinc-800 pb-4">
+          <h3 class="text-xl md:text-2xl font-bold flex items-center gap-2 text-white">
             <i data-lucide="calculator" class="w-6 h-6 text-amber-400"></i>
             Presupuestador
           </h3>
-          <span id="dolar-label" class="text-[11px] text-zinc-400 font-mono bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">Dólar oficial: cargando...</span>
+          <span id="dolar-label" class="text-[11px] text-zinc-400 sm:text-zinc-500 font-mono bg-white/5 sm:bg-zinc-950 px-3 sm:px-2.5 py-1.5 sm:py-1 rounded-lg border border-white/10 sm:border-zinc-800">Dólar oficial: cargando...</span>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">1. Tipo de evento:</label>
+          <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Selecciona el tipo de evento:</label>
           <div class="grid grid-cols-3 gap-2.5" id="group-evento" role="group" aria-label="Tipo de evento">
-            <button type="button" data-ev="quince" class="btn-ev py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-ev="quince" class="btn-ev py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="sparkles" class="w-4 h-4 pointer-events-none"></i>Quinceaños
             </button>
-            <button type="button" data-ev="boda" class="btn-ev py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-ev="boda" class="btn-ev py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="heart" class="w-4 h-4 pointer-events-none"></i>Boda
             </button>
-            <button type="button" data-ev="graduacion" class="btn-ev py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-ev="graduacion" class="btn-ev py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="graduation-cap" class="w-4 h-4 pointer-events-none"></i>Graduación
             </button>
           </div>
         </div>
 
-        <div id="grad-wrap" class="hidden space-y-4 bg-white/5 p-4 rounded-xl border border-white/10">
+        <div id="grad-wrap" class="hidden space-y-4 bg-white/5 sm:bg-zinc-950/60 p-4 rounded-xl border border-white/10 sm:border-zinc-800">
           <div>
             <label for="grad-qty" class="block text-xs font-medium text-zinc-400 mb-2">Cantidad de graduados:</label>
             <div class="relative">
               <i data-lucide="users" class="w-4 h-4 absolute left-3 top-3 text-zinc-500"></i>
-              <input type="number" id="grad-qty" min="1" value="30" class="w-full pl-9 p-2.5 rounded-xl bg-warm-900 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: 30">
+              <input type="number" id="grad-qty" min="1" value="30" class="w-full pl-9 p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-950 border border-white/10 sm:border-zinc-700 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: 30">
             </div>
           </div>
 
           <div>
             <label class="block text-xs font-medium text-zinc-400 mb-2">Momentos / Coberturas a incluir:</label>
             <div class="grid grid-cols-2 gap-2">
-              <button type="button" id="btn-upd" data-nombre="UPD" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-upd" data-nombre="UPD" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="sun" class="w-3.5 h-3.5 pointer-events-none"></i>UPD
               </button>
-              <button type="button" id="btn-buzos" data-nombre="Presentación de buzos" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-buzos" data-nombre="Presentación de buzos" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="shirt" class="w-3.5 h-3.5 pointer-events-none"></i>Presentación buzos
               </button>
-              <button type="button" id="btn-book" data-nombre="Book" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-book" data-nombre="Book" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="camera" class="w-3.5 h-3.5 pointer-events-none"></i>Book
               </button>
-              <button type="button" id="btn-colacion" data-nombre="Acto de colación" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-colacion" data-nombre="Acto de colación" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="award" class="w-3.5 h-3.5 pointer-events-none"></i>Acto de colación
               </button>
             </div>
@@ -338,25 +336,25 @@ tailwind.config = {
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">2. Cobertura:</label>
+          <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Tipo de cobertura:</label>
           <div class="grid grid-cols-3 gap-2.5" id="group-cobertura" role="group" aria-label="Tipo de cobertura">
-            <button type="button" data-tipo="foto" data-tarifa="60" class="btn-cob py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-tipo="foto" data-tarifa="60" class="btn-cob py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="camera" class="w-4 h-4 pointer-events-none"></i>Solo Foto
             </button>
-            <button type="button" data-tipo="video" data-tarifa="60" class="btn-cob py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-tipo="video" data-tarifa="60" class="btn-cob py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="video" class="w-4 h-4 pointer-events-none"></i>Solo Video
             </button>
-            <button type="button" data-tipo="ambos" data-tarifa="120" class="btn-cob py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-tipo="ambos" data-tarifa="120" class="btn-cob py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="film" class="w-4 h-4 pointer-events-none"></i>Foto + Video
             </button>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">3. Horas de servicio:</label>
+          <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Horas de cobertura:</label>
           <div class="grid grid-cols-3 gap-2.5" id="group-horas" role="group" aria-label="Horas de cobertura">
             <div class="relative group">
-              <button type="button" data-horas="8" class="btn-hr w-full py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+              <button type="button" data-horas="8" class="btn-hr w-full py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
                 <i data-lucide="clock" class="w-4 h-4 pointer-events-none"></i>8 Horas
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -369,7 +367,7 @@ tailwind.config = {
             </div>
 
             <div class="relative group">
-              <button type="button" data-horas="10" class="btn-hr w-full py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+              <button type="button" data-horas="10" class="btn-hr w-full py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
                 <i data-lucide="clock" class="w-4 h-4 pointer-events-none"></i>10 Horas
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -382,7 +380,7 @@ tailwind.config = {
             </div>
 
             <div class="relative group">
-              <button type="button" data-horas="12" class="btn-hr w-full py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+              <button type="button" data-horas="12" class="btn-hr w-full py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
                 <i data-lucide="clock" class="w-4 h-4 pointer-events-none"></i>12 Horas
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -397,37 +395,37 @@ tailwind.config = {
         </div>
 
         <div id="session-options">
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">4. Sesión previa:</label>
+          <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Sesiones de fotos / video previo:</label>
           <div class="grid grid-cols-3 gap-2.5" id="group-sesiones" role="group" aria-label="Sesiones previas">
-            <button type="button" data-sesiones="0" class="btn-ses py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" data-sesiones="0" class="btn-ses py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="x-circle" class="w-4 h-4 pointer-events-none"></i>Sin Sesión
             </button>
-            <button type="button" id="btn-ses-1" data-sesiones="1" class="btn-ses py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" id="btn-ses-1" data-sesiones="1" class="btn-ses py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="image" class="w-4 h-4 pointer-events-none"></i>1 Sesión
             </button>
-            <button type="button" id="btn-ses-2" data-sesiones="2" class="btn-ses py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" id="btn-ses-2" data-sesiones="2" class="btn-ses py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="images" class="w-4 h-4 pointer-events-none"></i>2 Sesiones
             </button>
           </div>
         </div>
 
         <div id="equipment-options">
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">5. Equipo adicional:</label>
+          <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Equipo adicional:</label>
           <div class="grid grid-cols-2 gap-2.5">
-            <button type="button" id="btn-xphoto" data-val="240" data-nombre="2do Fotógrafo" class="btn-eq py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" id="btn-xphoto" data-val="240" data-nombre="2do Fotógrafo" class="btn-eq py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="user-plus" class="w-4 h-4 pointer-events-none"></i>2do Fotógrafo
             </button>
-            <button type="button" id="btn-xvideo" data-val="240" data-nombre="2do Videógrafo" class="btn-eq py-3 px-3 rounded-xl border border-white/10 text-xs font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
+            <button type="button" id="btn-xvideo" data-val="240" data-nombre="2do Videógrafo" class="btn-eq py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
               <i data-lucide="user-plus" class="w-4 h-4 pointer-events-none"></i>2do Videógrafo
             </button>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">6. Adicionales:</label>
+          <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Adicionales de servicio:</label>
           <div class="grid grid-cols-3 gap-2.5">
             <div class="relative group">
-              <button type="button" id="btn-express" data-val="120" data-nombre="Fotos Exprés" class="btn-add w-full py-3 px-2 rounded-xl border border-white/10 text-[11px] font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-express" data-val="120" data-nombre="Fotos Exprés" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="zap" class="w-3.5 h-3.5 pointer-events-none"></i>Fotos Exprés
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -440,7 +438,7 @@ tailwind.config = {
             </div>
 
             <div class="relative group">
-              <button type="button" id="btn-live" data-val="240" data-nombre="Edición en Vivo" class="btn-add w-full py-3 px-2 rounded-xl border border-white/10 text-[11px] font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-live" data-val="240" data-nombre="Edición en Vivo" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="play-circle" class="w-3.5 h-3.5 pointer-events-none"></i>Edición en Vivo
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -453,7 +451,7 @@ tailwind.config = {
             </div>
 
             <div class="relative group">
-              <button type="button" id="btn-drone" data-val="120" data-nombre="Tomas Aéreas" class="btn-add w-full py-3 px-2 rounded-xl border border-white/10 text-[11px] font-semibold bg-white/5 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-drone" data-val="120" data-nombre="Tomas Aéreas" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="plane" class="w-3.5 h-3.5 pointer-events-none"></i>Tomas Aéreas
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -468,63 +466,63 @@ tailwind.config = {
         </div>
       </div>
 
-      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md space-y-2">
+      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-8">
+        <div class="bg-white/5 sm:bg-zinc-950/80 border border-white/10 sm:border-zinc-800 rounded-2xl p-6 sm:p-5 backdrop-blur-md sm:backdrop-blur-none space-y-2 shadow-lg">
           <div class="flex justify-between items-baseline">
-            <span class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Total estimado:</span>
-            <span id="total-usd" class="text-xs text-zinc-400 font-mono">(USD $0)</span>
+            <span class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Total de lista:</span>
+            <span id="total-usd" class="text-xs text-zinc-400 sm:text-zinc-500 font-mono">(USD $0)</span>
           </div>
           <div id="total-ars" aria-live="polite" class="text-3xl sm:text-4xl font-extrabold text-amber-400 tracking-tight">$0 ARS</div>
         </div>
 
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md space-y-3 text-xs">
-          <h3 class="font-semibold text-zinc-200 flex items-center gap-2 border-b border-white/10 pb-3 text-sm">
+        <div class="bg-white/5 sm:bg-zinc-950/80 border border-white/10 sm:border-zinc-800/80 rounded-2xl p-6 sm:p-5 backdrop-blur-md sm:backdrop-blur-none space-y-3 text-xs shadow-lg">
+          <h3 class="font-semibold text-zinc-200 flex items-center gap-2 border-b border-white/10 sm:border-zinc-800 pb-3 sm:pb-2.5 text-sm">
             <i data-lucide="credit-card" class="w-4 h-4 text-emerald-400"></i>
             Opciones de Pago y Financiación
           </h3>
           <div class="flex justify-between items-center py-1">
             <span class="text-zinc-400 flex items-center gap-1.5">
-              <i data-lucide="banknote" class="w-4 h-4 text-emerald-400"></i> Contado / Transferencia:
+              <i data-lucide="banknote" class="w-4 h-4 text-emerald-400"></i> Contado / Transf.:
             </span>
             <span id="pago-efectivo" class="font-bold text-emerald-400 text-sm">$0 ARS</span>
           </div>
-          <div id="container-sin-interes" class="space-y-2 border-t border-white/10 pt-3"></div>
+          <div id="container-sin-interes" class="space-y-2 border-t border-white/10 sm:border-zinc-800/60 pt-3 sm:pt-2.5"></div>
         </div>
 
-        <div id="contacto" class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md space-y-4">
+        <div id="contacto" class="bg-white/5 sm:bg-zinc-950/80 border border-white/10 sm:border-zinc-800 rounded-2xl p-6 sm:p-5 backdrop-blur-md sm:backdrop-blur-none space-y-4 shadow-lg">
           <h3 class="text-sm font-bold flex items-center gap-2 text-zinc-200">
             <i data-lucide="send" class="w-4 h-4 text-emerald-400"></i>
-            Enviar Cotización por WhatsApp
+            Enviar Presupuesto
           </h3>
           <div class="space-y-3">
             <div>
               <label for="client-name" class="block text-xs text-zinc-400 mb-1">Nombre completo:</label>
-              <input type="text" id="client-name" class="w-full p-3 rounded-xl bg-warm-900 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: Luca Monteserin">
+              <input type="text" id="client-name" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: Luca Monteserin">
             </div>
 
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label for="client-phone" class="block text-xs text-zinc-400 mb-1">WhatsApp:</label>
-                <input type="tel" id="client-phone" class="w-full p-3 rounded-xl bg-warm-900 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: 3492591128">
+                <input type="tel" id="client-phone" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: 3492591128">
               </div>
               <div>
                 <label for="event-date" class="block text-xs text-zinc-400 mb-1">Fecha del evento:</label>
-                <input type="date" id="event-date" class="w-full p-3 rounded-xl bg-warm-900 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-400">
+                <input type="date" id="event-date" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white focus:outline-none focus:border-amber-400">
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label for="venue-name" class="block text-xs text-zinc-400 mb-1">Salón / Lugar:</label>
-                <input type="text" id="venue-name" class="w-full p-3 rounded-xl bg-warm-900 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: Tipuana">
+                <input type="text" id="venue-name" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: Tipuana">
               </div>
               <div>
                 <label for="guest-count" class="block text-xs text-zinc-400 mb-1">Cant. personas:</label>
-                <input type="number" id="guest-count" min="1" placeholder="Ej: 150" class="w-full p-3 rounded-xl bg-warm-900 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-400">
+                <input type="number" id="guest-count" min="1" placeholder="Ej: 150" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white focus:outline-none focus:border-amber-400">
               </div>
             </div>
 
-            <button type="button" id="btn-whatsapp" class="w-full py-4 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 mt-2">
+            <button type="button" id="btn-whatsapp" class="w-full py-4 sm:py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 mt-2">
               <i data-lucide="message-square" class="w-4 h-4"></i>
               Enviar Cotización por WhatsApp
             </button>

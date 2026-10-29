@@ -496,10 +496,16 @@ if (sliderSection && track) {
 }
 
 // ==========================================================================
-  // Inicialización General y Listeners del Cotizador
-  // ==========================================================================
-  
-  // NUEVO: Interceptar clics en enlaces internos para evitar el #hash en la URL
+// 8. Inicialización General, Listeners y Navegación sin Hashtag
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const year = $('#current-year');
+  if (year) year.textContent = new Date().getFullYear();
+  renderPublicCalendar(Y, M);
+  if ($('#price-display-ars')) fetchUsdRate();
+  updateEventUI();
+
+  // Interceptar clics en enlaces internos para evitar el #hash en la URL
   document.addEventListener('click', e => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
@@ -509,30 +515,13 @@ if (sliderSection && track) {
     
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      e.preventDefault(); // Evita que se agregue el # a la barra de direcciones
+      e.preventDefault();
       targetElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
     }
   });
-
-  setTimeout(() => {
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  }, 50);
-});
-
-// ==========================================================================
-// 8. Inicialización General y Listeners del Cotizador
-// ==========================================================================
-document.addEventListener('DOMContentLoaded', () => {
-  const year = $('#current-year');
-  if (year) year.textContent = new Date().getFullYear();
-  renderPublicCalendar(Y, M);
-  if ($('#price-display-ars')) fetchUsdRate();
-  updateEventUI();
 
   $$('.opt.ev').forEach(b => {
     b.addEventListener('click', () => {

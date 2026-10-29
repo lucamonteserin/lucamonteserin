@@ -505,24 +505,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if ($('#price-display-ars')) fetchUsdRate();
   updateEventUI();
 
-  // Clicks en Tipos de Eventos (.opt.ev)
   $$('.opt.ev').forEach(b => {
     b.addEventListener('click', () => {
       S.ev = b.dataset.ev.trim();
-      $$('.opt.ev').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));       updateEventUI();     });   });    // Clicks en Tipos de Cobertura (.opt.fmt)   $$
-('.opt.fmt').forEach(b => {
+      $$('.opt.ev').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      updateEventUI();
+    });
+  });
+
+  $$('.opt.fmt').forEach(b => {
     b.addEventListener('click', () => {
       S.fmt = b.dataset.fmt.trim();
-      $$('.opt.fmt').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));       updateCalculatedPrice();     });   });    // Clicks en Horas de Evento (.hrs)   $$
-('.hrs').forEach(b => {
+      $$('.opt.fmt').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      updateCalculatedPrice();
+    });
+  });
+
+  $$('.hrs').forEach(b => {
     b.addEventListener('click', () => {
       S.h = +b.dataset.h;
-      $$('.hrs').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));       updateCalculatedPrice();     });   });    // Clicks en Horas de Sesión (.shrs)   $$
-('.shrs').forEach(b => {
+      $$('.hrs').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      updateCalculatedPrice();
+    });
+  });
+
+  $$('.shrs').forEach(b => {
     b.addEventListener('click', () => {
       S.sh = +b.dataset.sh;
-      $$('.shrs').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));       updateCalculatedPrice();     });   });    // Manejo de Toggles Interactivos   $$
-('.toggle-btn').forEach(toggle => {
+      $$('.shrs').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      updateCalculatedPrice();
+    });
+  });
+
+  $$('.toggle-btn').forEach(toggle => {
     const checkboxId = toggle.dataset.target;
     const checkbox = $('#' + checkboxId);
     
@@ -546,10 +561,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Inputs de graduados
   $('#grad-qty')?.addEventListener('input', updateCalculatedPrice);
 
-  // Contador de books
   const booksOut = $('#books');
   $('#books-minus')?.addEventListener('click', () => {
     S.books = Math.max(0, S.books - 1);
@@ -562,7 +575,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculatedPrice();
   });
 
-  // Cargar presupuesto en el formulario de contacto
   const quoteSend = $('#quote-send');
   if (quoteSend) {
     quoteSend.onclick = () => {
@@ -593,7 +605,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  // Renderizar iconos de Lucide al final
   setTimeout(() => {
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();

@@ -1,0 +1,417 @@
+/* ==========================================================================
+Luca Monteserin | PH + VIDEO - Estilos Globales (Opaco y Estable)
+========================================================================== */
+
+/* Secciones con fondo sólido obligatorio para evitar transparencias o texto fantasma */
+section:not(#hero) {
+position: relative;
+z-index: 20;
+}
+
+#hero {
+z-index: 0;
+}
+
+:root {
+--ease: cubic-bezier(0.16, 1, 0.3, 1);
+--color-gold-300: #f2e8ce;
+--color-gold-400: #d7bf88;
+--color-gold-500: #b99856;
+--color-warm-950: #0c0b0a;
+--color-warm-900: #141311;
+--color-warm-800: #1d1b18;
+}
+
+html {
+scroll-padding-top: 90px;
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--color-warm-950);
+}
+
+::selection {
+background: rgba(215, 191, 136, 0.75);
+color: #11100e;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+width: 6px;
+}
+::-webkit-scrollbar-track {
+background: var(--color-warm-950);
+}
+::-webkit-scrollbar-thumb {
+background: #2a2723;
+border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: var(--color-gold-500);
+}
+
+/* Efecto Spotlight de Proximidad */
+.spotlight-glow {
+pointer-events: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 450px;
+height: 450px;
+transform: translate(-50%, -50%);
+background: radial-gradient(circle, rgba(215, 191, 136, 0.055) 0%, rgba(185, 152, 86, 0.015) 40%, transparent 70%);
+border-radius: 50%;
+z-index: 10;
+transition: opacity 0.3s ease;
+opacity: 0;
+}
+
+/* Enfoque accesible */
+:focus-visible {
+outline: 2px solid var(--color-gold-400);
+outline-offset: 3px;
+}
+
+/* Botón accesible para saltar al contenido */
+.skip {
+position: absolute;
+left: -999px;
+top: 8px;
+z-index: 100;
+background: var(--color-gold-400);
+color: var(--color-warm-950);
+padding: 8px 16px;
+border-radius: 9999px;
+font-weight: 700;
+}
+.skip:focus {
+left: 8px;
+}
+
+/* ==========================================================================
+Componentes Visuales (Glassmorphism & Gradientes)
+========================================================================== */
+
+.glass-panel {
+background: rgba(23, 21, 18, 0.95); /* Opacidad mayor para evitar transparencias */
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.07);
+transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.glass-panel:hover {
+border-color: rgba(230, 200, 117, 0.18);
+box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+}
+
+.gold-text {
+background: linear-gradient(135deg, #ffffff 0%, #e6c875 60%, #d4af37 100%);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+Header & Navegación
+========================================================================== */
+
+#main-header {
+transition: background 0.5s var(--ease), border-color 0.5s, backdrop-filter 0.5s, transform 0.4s var(--ease);
+border-bottom: 1px solid transparent;
+}
+
+#main-header.scrolled {
+background: rgba(12, 11, 10, 0.85);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-color: rgba(255, 255, 255, 0.08);
+box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link {
+position: relative;
+padding: 4px 0;
+}
+
+.nav-link::after {
+content: "";
+position: absolute;
+left: 0;
+right: 100%;
+bottom: -4px;
+height: 1px;
+background: var(--color-gold-500);
+transition: right 0.4s var(--ease);
+}
+
+.nav-link:hover::after,
+.nav-link.current::after {
+right: 0;
+}
+
+/* ==========================================================================
+Hero & Slider
+========================================================================== */
+
+.hero-slide {
+position: absolute;
+inset: 0;
+opacity: 0;
+transition: opacity 1.5s ease-in-out;
+pointer-events: none;
+}
+
+.hero-slide.active {
+opacity: 1;
+}
+
+.hero-slide img {
+transform: scale(1.05);
+transition: transform 7s var(--ease);
+}
+
+.hero-slide.active img {
+transform: scale(1);
+}
+
+/* Forzar tamaño amplio y flexible para el titulo.svg en la portada */
+#hero-content img[src="titulo.svg"] {
+max-width: 750px !important;
+width: 100% !important;
+height: auto !important;
+}
+
+/* ==========================================================================
+Animaciones Reveal
+========================================================================== */
+
+.reveal {
+opacity: 1;
+transform: none;
+transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+body.js-ready .reveal:not(.on) {
+opacity: 0;
+transform: translateY(24px);
+}
+
+body.js-ready .reveal.on {
+opacity: 1 !important;
+transform: none !important;
+}
+
+.card {
+transition: transform 0.6s var(--ease), border-color 0.4s, box-shadow 0.6s var(--ease);
+}
+
+.card:hover {
+transform: translateY(-6px);
+border-color: rgba(212, 175, 55, 0.25);
+box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.card img {
+transition: transform 1s var(--ease);
+}
+
+.card:hover img {
+transform: scale(1.05);
+}
+
+/* ==========================================================================
+Botones, Formularios y Utilidades
+========================================================================== */
+
+.btn {
+position: relative;
+overflow: hidden;
+transition: transform 0.3s var(--ease), background 0.3s;
+}
+
+.btn:hover {
+transform: translateY(-2px);
+}
+
+.btn:active {
+transform: scale(0.98);
+}
+
+/* Modales y Lightboxes superpuestos */
+#video-modal,
+#img-modal,
+#lightbox {
+z-index: 100 !important;
+}
+
+#lightbox {
+opacity: 0;
+transition: opacity 0.4s var(--ease);
+}
+
+#lightbox.open {
+opacity: 1;
+}
+
+#cal-grid {
+transition: opacity 0.25s, transform 0.3s var(--ease);
+}
+
+#cal-grid.swap {
+opacity: 0;
+transform: translateY(8px);
+}
+
+.field {
+width: 100%;
+padding: 0.875rem 1rem;
+border-radius: 1rem;
+background: var(--color-warm-900);
+border: 1px solid rgba(255, 255, 255, 0.12);
+color: #fff;
+font-size: 0.875rem;
+}
+
+.field::placeholder {
+color: #8b95a5;
+}
+
+.field:focus {
+outline: none;
+border-color: var(--color-gold-400);
+box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.lbl {
+display: block;
+font-size: 0.75rem;
+letter-spacing: 0.06em;
+color: #cbd5e1;
+margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+Efectos Neón, Animated Gradient Border & Dynamic Color (Material You)
+========================================================================== */
+
+/* 1. Animated Gradient Border (Para contenedores destacados) */
+@keyframes goldGradientMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.animated-gradient-border {
+position: relative;
+border: 1px solid transparent !important;
+background-image:
+linear-gradient(var(--color-warm-950), var(--color-warm-950)),
+linear-gradient(115deg, #d4af37, #ffffff, #e6c875, #7a5c1a, #d4af37) !important;
+background-origin: border-box !important;
+background-clip: padding-box, border-box !important;
+background-size: 300% 300% !important;
+animation: goldGradientMove 8s ease infinite;
+box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+/* 2. Glow / Neon Border Effect (Botones de acción y elementos clave) */
+.btn-glow {
+position: relative;
+transition: all 0.3s var(--ease);
+}
+
+.btn-glow:hover {
+box-shadow: 0 8px 24px rgba(185, 152, 86, 0.16);
+transform: translateY(-1px);
+}
+
+.neon-glow-active {
+box-shadow: 0 0 15px rgba(230, 200, 117, 0.35), inset 0 0 10px rgba(212, 175, 55, 0.15) !important;
+border-color: var(--color-gold-400) !important;
+}
+
+/* 3. Material You / Dynamic Color (Reacción fluida en filtros y opciones) */
+.opt {
+border: 1px solid rgba(255, 255, 255, 0.1);
+background: var(--color-warm-900);
+color: #cbd5e1;
+transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease), color 0.3s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.opt[aria-pressed="true"] {
+background: var(--color-gold-400) !important;
+border-color: var(--color-gold-400) !important;
+color: var(--color-warm-950) !important;
+font-weight: 700;
+box-shadow: 0 4px 16px rgba(185, 152, 86, 0.18) !important;
+}
+
+/* Editorial polish: quieter surfaces, clearer rhythm, and comfortable mobile controls. */
+#main-header .glass-panel {
+border-radius: 0 0 1.25rem 1.25rem;
+}
+
+#hero-title img {
+filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.28));
+}
+
+#proyectos {
+background: linear-gradient(180deg, #15130f 0%, #0c0b0a 45%);
+}
+
+#slider-cinematico {
+border-top: 1px solid rgba(215, 191, 136, 0.09);
+border-bottom: 1px solid rgba(215, 191, 136, 0.09);
+}
+
+#gallery .card {
+border-color: rgba(255, 255, 255, 0.08);
+box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+#gallery .card:hover {
+border-color: rgba(215, 191, 136, 0.28);
+box-shadow: 0 22px 48px rgba(0, 0, 0, 0.3);
+}
+
+#lightbox:focus {
+outline: none;
+}
+
+#toast {
+max-width: min(92vw, 28rem);
+}
+
+button, a, input, select, textarea {
+touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  #hero { min-height: 600px; }
+  #proyectos { padding-top: 5rem; padding-bottom: 5rem; }
+  #gallery { gap: 1rem; }
+  #slider-cinematico .w-80 { width: 18rem; }
+  #slider-cinematico .h-80 { height: 18rem; }
+  #lightbox img { max-height: 62vh; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .spotlight-glow { display: none; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+animation-duration: 0.01ms !important;
+transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
+}
+.reveal {
+opacity: 1 !important;
+transform: none !important;
+}
+.animated-gradient-border {
+animation: none !important;
+}
+}

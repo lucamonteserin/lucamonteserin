@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de Cotizador - Luca Monteserin</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
+          colors: {
+            gold: {
+              300: '#fff',
+              400: 'rgba(230, 200, 117, 0.7)',
+              500: 'rgba(212, 175, 55, 0.7)'
+            },
+            warm: {
+              950: '#0c0b0a',
+              900: '#141311',
+              800: '#1d1b18'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-warm-950 text-slate-200 font-sans antialiased min-h-screen flex items-center justify-center p-6">
+
+  <div class="max-w-3xl w-full">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-white mb-2">Página de Prueba: Cotizador</h1>
+      <p class="text-slate-400 text-xs">Aislado para verificar que la lógica y los eventos responden correctamente.</p>
+    </div>
+
+    <!-- Contenedor del Cotizador -->
+    <div id="presupuesto" class="p-6 sm:p-8 rounded-3xl bg-warm-900 border border-white/10 shadow-2xl">
+      <div class="space-y-6">
+  
+        <!-- 1. Tipo de evento -->
+        <fieldset class="pb-6 border-b border-white/10">
+          <legend class="text-sm font-semibold mb-2 text-white">1. Tipo de evento</legend>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3" role="group">
+            <button type="button" class="opt ev py-3 px-4 rounded-2xl text-xs tracking-wider transition-all text-center border border-white/10 hover:border-gold-500/40 aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-ev="Quinceaños" aria-pressed="true">Quinceaños</button>
+            <button type="button" class="opt ev py-3 px-4 rounded-2xl text-xs tracking-wider transition-all text-center border border-white/10 hover:border-gold-500/40 aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-ev="Boda" aria-pressed="false">Boda</button>
+            <button type="button" class="opt ev py-3 px-4 rounded-2xl text-xs tracking-wider transition-all text-center border border-white/10 hover:border-gold-500/40 aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-ev="Graduación" aria-pressed="false">Graduación</button>
+            <button type="button" class="opt ev py-3 px-4 rounded-2xl text-xs tracking-wider transition-all text-center border border-white/10 hover:border-gold-500/40 aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-ev="Sesión" aria-pressed="false">Sesión</button>
+          </div>
+        </fieldset>
+
+        <!-- Cantidad de graduados (condicional) -->
+        <div id="grad-wrap" class="hidden">
+          <label class="block text-xs font-medium mb-1 text-white" for="grad-qty">Cantidad de graduados</label>
+          <input type="number" id="grad-qty" min="1" value="30" class="w-full p-3 rounded-xl bg-warm-950 border border-white/10 text-xs text-white focus:outline-none focus:border-gold-400" placeholder="Ej: 30">
+        </div>
+
+        <!-- 2. Tipo de cobertura -->
+        <fieldset>
+          <legend class="text-sm font-semibold mb-2 text-white">2. Tipo de cobertura</legend>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
+            <button type="button" class="opt fmt py-3 px-4 rounded-2xl text-xs tracking-wider flex items-center justify-center gap-2 border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-fmt="foto" aria-pressed="false">
+              <i data-lucide="camera" class="w-4 h-4"></i>Solo foto
+            </button>
+            <button type="button" class="opt fmt py-3 px-4 rounded-2xl text-xs tracking-wider flex items-center justify-center gap-2 border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-fmt="video" aria-pressed="false">
+              <i data-lucide="video" class="w-4 h-4"></i>Solo video
+            </button>
+            <button type="button" class="opt fmt py-3 px-4 rounded-2xl text-xs tracking-wider flex items-center justify-center gap-2 border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-fmt="ambos" aria-pressed="true">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>Foto + video
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- 3. Horas de cobertura / Sesión -->
+        <fieldset id="fs-hrs-event">
+          <legend class="text-sm font-semibold mb-2 text-white">3. Horas de cobertura</legend>
+          <div class="grid grid-cols-3 gap-3 mt-3">
+            <button type="button" class="opt hrs hour-btn py-3 px-4 rounded-2xl text-xs tracking-wider border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-h="8" aria-pressed="true">8 horas</button>
+            <button type="button" class="opt hrs hour-btn py-3 px-4 rounded-2xl text-xs tracking-wider border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-h="10" aria-pressed="false">10 horas</button>
+            <button type="button" class="opt hrs hour-btn py-3 px-4 rounded-2xl text-xs tracking-wider border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-h="12" aria-pressed="false">12 horas</button>
+          </div>
+        </fieldset>
+
+        <fieldset id="fs-hrs-session" class="hidden">
+          <legend class="text-sm font-semibold mb-2 text-white">3. Duración de la sesión</legend>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <button type="button" class="opt shrs py-3 px-4 rounded-2xl text-xs tracking-wider border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-sh="1" aria-pressed="true">1 hora</button>
+            <button type="button" class="opt shrs py-3 px-4 rounded-2xl text-xs tracking-wider border border-white/10 hover:border-gold-500/40 transition-all aria-pressed:bg-gold-400 aria-pressed:text-warm-950 aria-pressed:font-semibold" data-sh="2" aria-pressed="false">2 horas</button>
+          </div>
+        </fieldset>
+
+        <!-- 4 y 5. Equipo adicional y Books -->
+        <div class="grid grid-cols-1

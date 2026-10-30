@@ -216,40 +216,27 @@ if (lb) {
 }
 
 // ==========================================================================
-// 4. Carrusel de Videos Infinito (Exclusivo Videos)
+// Slider Cinemático de Videos Infinito (Activo y Corregido)
 // ==========================================================================
-const sliderSection = $('#slider-cinematico');
-const track = $('#marquee-track');
+const sliderSection = document.getElementById('slider-cinematico');
+const track = document.getElementById('marquee-track');
 
 if (sliderSection && track) {
   const videos = [...track.querySelectorAll('video')];
-  
-  if (!prefersReducedMotion) {
-    const videoObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      const vid = entry.target;
-      if (entry.isIntersecting && !document.hidden) vid.play().catch(() => {});
-      else vid.pause();
-    }), { rootMargin: '100px' });
-    videos.forEach(vid => {
-      vid.muted = true;
-      vid.preload = 'none';
-      videoObserver.observe(vid);
-    });
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) videos.forEach(vid => vid.pause());
-    });
-  }
+  videos.forEach(vid => {
+    vid.muted = true;
+    vid.play().catch(() => {});
+  });
 
   let currentX = 0;
-  let baseSpeed = 1.2; 
+  let baseSpeed = 1.0;
   let targetSpeed = baseSpeed;
-  
+
   sliderSection.addEventListener('mousemove', (e) => {
     const rect = sliderSection.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
-    const sectionWidth = rect.width;
-    const normalized = (mouseX / sectionWidth) * 2 - 1;
-    targetSpeed = normalized * 4.5;
+    const normalized = (mouseX / rect.width) * 2 - 1;
+    targetSpeed = normalized * 3.5;
   });
 
   sliderSection.addEventListener('mouseleave', () => {
@@ -258,20 +245,12 @@ if (sliderSection && track) {
 
   let sliderVisible = false;
   let sliderFrame = 0;
-  const sliderObserver = new IntersectionObserver(entries => {
-    sliderVisible = entries.some(entry => entry.isIntersecting);
-    if (sliderVisible && !prefersReducedMotion && !document.hidden && !sliderFrame) {
-      sliderFrame = requestAnimationFrame(animateSlider);
-    } else if (!sliderVisible && sliderFrame) {
-      cancelAnimationFrame(sliderFrame);
-      sliderFrame = 0;
-    }
-  });
-  sliderObserver.observe(sliderSection);
 
   function animateSlider() {
-    if (prefersReducedMotion || document.hidden || !sliderVisible) { sliderFrame = 0; return; }
-    baseSpeed = 1.2; 
+    if (document.hidden || !sliderVisible) {
+      sliderFrame = 0;
+      return;
+    }
     let activeTarget = (targetSpeed === baseSpeed) ? -baseSpeed : targetSpeed;
     currentX += activeTarget;
     const halfWidth = track.scrollWidth / 2;
@@ -286,11 +265,22 @@ if (sliderSection && track) {
     sliderFrame = requestAnimationFrame(animateSlider);
   }
 
+  const sliderObserver = new IntersectionObserver(entries => {
+    sliderVisible = entries.some(entry => entry.isIntersecting);
+    if (sliderVisible && !document.hidden && !sliderFrame) {
+      sliderFrame = requestAnimationFrame(animateSlider);
+    } else if (!sliderVisible && sliderFrame) {
+      cancelAnimationFrame(sliderFrame);
+      sliderFrame = 0;
+    }
+  });
+  sliderObserver.observe(sliderSection);
+
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && sliderFrame) {
       cancelAnimationFrame(sliderFrame);
       sliderFrame = 0;
-    } else if (!document.hidden && sliderVisible && !prefersReducedMotion && !sliderFrame) {
+    } else if (!document.hidden && sliderVisible && !sliderFrame) {
       sliderFrame = requestAnimationFrame(animateSlider);
     }
   });

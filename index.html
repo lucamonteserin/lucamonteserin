@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV4LKFYDF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,7 +42,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Photographer",
-    "name": "Luca Monteserin · Fotógrafo & Filmmaker",
+    "name": "Luca Monteserin",
     "url": "https://www.lucamonteserin.com.ar",
     "image": "https://www.lucamonteserin.com.ar/portada.jpg",
     "primaryImageOfPage": "https://www.lucamonteserin.com.ar/portada.jpg",
@@ -83,19 +83,19 @@ tailwind.config = {
 <body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
 <a href="#main" class="skip">Saltar al contenido</a>
 
-<header id="main-header" class="fixed top-0 z-50 w-full">
+<header id="main-header" class="fixed top-0 z-50 w-full bg-warm-950/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
     
     <!-- Logo a la izquierda en PC, centrado absoluto solo en móviles -->
-    <a href="#hero" class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group flex-shrink-0" aria-label="Luca Monteserin · Fotógrafo & Filmmaker, volver al inicio">
-      <img src="logo.svg" alt="Logo Luca Monteserin · Fotógrafo & Filmmaker" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
+    <a href="#hero" class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group flex-shrink-0" aria-label="Luca Monteserin, volver al inicio">
+      <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
 
     <!-- Menú desktop -->
     <nav class="hidden lg:flex items-center gap-8 text-xs tracking-widest text-slate-200 font-medium" aria-label="Principal">
       <a class="nav-link" href="#proyectos">Destacados</a>
-      <a class="nav-link" href="/galeria">Galería</a>
-      <a class="nav-link" href="/equipo">Equipo</a>
+      <a class="nav-link" href="galeria">Galería</a>
+      <a class="nav-link" href="equipo">Equipo</a>
       <a class="nav-link" href="#presupuesto-seccion">Presupuesto</a>
       <a class="nav-link" href="#contacto">Contacto</a>
     </nav>
@@ -107,7 +107,7 @@ tailwind.config = {
     </div>
   </div>
 
-  <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden lg:hidden glass-panel fixed top-20 left-4 right-4 z-50 p-6 space-y-4 text-sm font-medium tracking-widest rounded-2xl shadow-2xl border border-white/10">
+  <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden lg:hidden glass-panel fixed top-20 left-4 right-4 z-50 p-6 space-y-4 text-sm font-medium tracking-widest rounded-2xl shadow-2xl border border-white/10 bg-warm-900/90 backdrop-blur-xl">
     <a href="#proyectos" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Destacados</a>
     <a href="galeria" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Galería</a>
     <a href="equipo" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Equipo</a>
@@ -255,7 +255,6 @@ tailwind.config = {
       <p class="text-slate-300 text-sm">Configurá tu cobertura y obtené un estimado de referencia al instante.</p>
     </div>
 
-    <!-- Tarjeta en PC / Fluido a pantalla completa exclusivo en móviles -->
     <div class="w-full max-w-none sm:max-w-5xl mx-auto bg-transparent sm:bg-zinc-900 border-0 sm:border sm:border-zinc-800 p-0 sm:p-8 rounded-none sm:rounded-2xl shadow-none sm:shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start reveal">
       <div class="lg:col-span-7 space-y-6">
         <div class="flex justify-between items-center border-b border-white/10 sm:border-zinc-800 pb-4">
@@ -331,39 +330,16 @@ tailwind.config = {
               <button type="button" data-horas="8" class="btn-hr w-full py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
                 <i data-lucide="clock" class="w-4 h-4 pointer-events-none"></i>8 Horas
               </button>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center pointer-events-none z-20 w-48">
-                <div class="bg-zinc-950 text-zinc-200 text-[10px] p-2.5 rounded-lg border border-zinc-700 shadow-xl text-center leading-tight">
-                  <span class="font-bold text-amber-400 block mb-0.5">Ejemplo: 20:00 a 04:00 hs</span>
-                  (Cobertura estándar.)
-                </div>
-                <div class="w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700 rotate-45 -mt-1"></div>
-              </div>
             </div>
-
             <div class="relative group">
               <button type="button" data-horas="10" class="btn-hr w-full py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
                 <i data-lucide="clock" class="w-4 h-4 pointer-events-none"></i>10 Horas
               </button>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center pointer-events-none z-20 w-48">
-                <div class="bg-zinc-950 text-zinc-200 text-[10px] p-2.5 rounded-lg border border-zinc-700 shadow-xl text-center leading-tight">
-                  <span class="font-bold text-amber-400 block mb-0.5">Ejemplo: 19:00 a 05:00 hs</span>
-                  (Incluye previas y final de fiesta.)
-                </div>
-                <div class="w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700 rotate-45 -mt-1"></div>
-              </div>
             </div>
-
             <div class="relative group">
               <button type="button" data-horas="12" class="btn-hr w-full py-3 sm:py-2.5 px-3 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-2 text-white">
                 <i data-lucide="clock" class="w-4 h-4 pointer-events-none"></i>12 Horas
               </button>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center pointer-events-none z-20 w-48">
-                <div class="bg-zinc-950 text-zinc-200 text-[10px] p-2.5 rounded-lg border border-zinc-700 shadow-xl text-center leading-tight">
-                  <span class="font-bold text-amber-400 block mb-0.5">Ejemplo: 17:00 a 05:00 hs</span>
-                  (Cobertura completa.)
-                </div>
-                <div class="w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700 rotate-45 -mt-1"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -398,44 +374,15 @@ tailwind.config = {
         <div>
           <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Adicionales de servicio:</label>
           <div class="grid grid-cols-3 gap-2.5">
-            <div class="relative group">
-              <button type="button" id="btn-express" data-val="120" data-val-grad="8" data-nombre="Fotos Exprés" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
-                <i data-lucide="zap" class="w-3.5 h-3.5 pointer-events-none"></i>Fotos Exprés
-              </button>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
-                <div class="bg-zinc-950 text-zinc-200 text-[10px] p-2.5 rounded-lg border border-zinc-700 shadow-xl text-center leading-tight">
-                  <span class="font-bold text-amber-400 block mb-0.5">Entrega Rápida</span>
-                  Entrega de fotos editadas en alta resolución dentro de las 72hs hábiles.
-                </div>
-                <div class="w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700 rotate-45 -mt-1"></div>
-              </div>
-            </div>
-
-            <div class="relative group">
-              <button type="button" id="btn-live" data-val="240" data-val-grad="12" data-nombre="Edición en Vivo" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
-                <i data-lucide="play-circle" class="w-3.5 h-3.5 pointer-events-none"></i>Edición en Vivo
-              </button>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
-                <div class="bg-zinc-950 text-zinc-200 text-[10px] p-2.5 rounded-lg border border-zinc-700 shadow-xl text-center leading-tight">
-                  <span class="font-bold text-amber-400 block mb-0.5">Same Day Edit</span>
-                  Edición de video o reel proyectado en pantalla durante la fiesta.
-                </div>
-                <div class="w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700 rotate-45 -mt-1"></div>
-              </div>
-            </div>
-
-            <div class="relative group">
-              <button type="button" id="btn-drone" data-val="120" data-val-grad="4" data-nombre="Tomas Aéreas" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
-                <i data-lucide="plane" class="w-3.5 h-3.5 pointer-events-none"></i>Tomas Aéreas
-              </button>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
-                <div class="bg-zinc-950 text-zinc-200 text-[10px] p-2.5 rounded-lg border border-zinc-700 shadow-xl text-center leading-tight">
-                  <span class="font-bold text-amber-400 block mb-0.5">Tomas Aéreas</span>
-                  Cobertura con dron para fotos y video aéreo en exteriores.
-                </div>
-                <div class="w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700 rotate-45 -mt-1"></div>
-              </div>
-            </div>
+            <button type="button" id="btn-express" data-val="120" data-val-grad="8" data-nombre="Fotos Exprés" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <i data-lucide="zap" class="w-3.5 h-3.5 pointer-events-none"></i>Fotos Exprés
+            </button>
+            <button type="button" id="btn-live" data-val="240" data-val-grad="12" data-nombre="Edición en Vivo" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <i data-lucide="play-circle" class="w-3.5 h-3.5 pointer-events-none"></i>Edición en Vivo
+            </button>
+            <button type="button" id="btn-drone" data-val="120" data-val-grad="4" data-nombre="Tomas Aéreas" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <i data-lucide="plane" class="w-3.5 h-3.5 pointer-events-none"></i>Tomas Aéreas
+            </button>
           </div>
         </div>
       </div>

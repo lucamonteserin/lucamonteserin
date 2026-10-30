@@ -87,7 +87,7 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
     
     <!-- Logo a la izquierda en PC, centrado absoluto solo en móviles -->
-    <a href="#hero" class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group flex-shrink-0" aria-label="Luca Monteserin, inicio">
+    <a href="#hero" class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group flex-shrink-0" aria-label="Luca Monteserin, volver al inicio">
       <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
 
@@ -317,18 +317,18 @@ tailwind.config = {
           </div>
 
           <div>
-            <label class="block text-xs font-medium text-zinc-400 mb-2">Momentos / Coberturas a incluir:</label>
+            <label class="block text-xs font-medium text-zinc-400 mb-2">Momentos / Coberturas a incluir ($4 USD por graduado c/u):</label>
             <div class="grid grid-cols-2 gap-2">
-              <button type="button" id="btn-upd" data-nombre="UPD" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-upd" data-val="4" data-nombre="UPD" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="sun" class="w-3.5 h-3.5 pointer-events-none"></i>UPD
               </button>
-              <button type="button" id="btn-buzos" data-nombre="Presentación de buzos" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-buzos" data-val="4" data-nombre="Presentación de buzos" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="shirt" class="w-3.5 h-3.5 pointer-events-none"></i>Presentación buzos
               </button>
-              <button type="button" id="btn-book" data-nombre="Book" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-book" data-val="4" data-nombre="Book" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="camera" class="w-3.5 h-3.5 pointer-events-none"></i>Book
               </button>
-              <button type="button" id="btn-colacion" data-nombre="Acto de colación" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-colacion" data-val="4" data-nombre="Acto de colación" class="btn-grad-opt py-2 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-xs font-semibold bg-white/5 sm:bg-zinc-800 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="award" class="w-3.5 h-3.5 pointer-events-none"></i>Acto de colación
               </button>
             </div>
@@ -425,7 +425,7 @@ tailwind.config = {
           <label class="block text-xs font-semibold sm:font-medium uppercase sm:capitalize tracking-wider sm:tracking-normal text-zinc-400 mb-3 sm:mb-2">Adicionales de servicio:</label>
           <div class="grid grid-cols-3 gap-2.5">
             <div class="relative group">
-              <button type="button" id="btn-express" data-val="120" data-nombre="Fotos Exprés" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-express" data-val="120" data-val-grad="8" data-nombre="Fotos Exprés" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="zap" class="w-3.5 h-3.5 pointer-events-none"></i>Fotos Exprés
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -438,7 +438,7 @@ tailwind.config = {
             </div>
 
             <div class="relative group">
-              <button type="button" id="btn-live" data-val="240" data-nombre="Edición en Vivo" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-live" data-val="240" data-val-grad="12" data-nombre="Edición en Vivo" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="play-circle" class="w-3.5 h-3.5 pointer-events-none"></i>Edición en Vivo
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -451,7 +451,7 @@ tailwind.config = {
             </div>
 
             <div class="relative group">
-              <button type="button" id="btn-drone" data-val="120" data-nombre="Tomas Aéreas" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
+              <button type="button" id="btn-drone" data-val="120" data-val-grad="4" data-nombre="Tomas Aéreas" class="btn-add w-full py-3 sm:py-2.5 px-2 rounded-xl border border-white/10 sm:border-zinc-700 text-[11px] font-semibold bg-white/5 sm:bg-zinc-800 hover:border-amber-400 transition flex items-center justify-center gap-1.5 text-white">
                 <i data-lucide="plane" class="w-3.5 h-3.5 pointer-events-none"></i>Tomas Aéreas
               </button>
               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex group-focus-within:flex flex-col items-center pointer-events-none z-20 w-48">
@@ -542,7 +542,7 @@ tailwind.config = {
     </div>
     <div class="flex justify-center order-1 md:order-2">
       <a href="#hero" class="inline-block group" aria-label="Luca Monteserin, volver al inicio">
-        <img src="logo.svg" alt="Logo" class="h-10 w-auto object-contain mx-auto transition-transform duration-500 ease-out group-hover:scale-110">
+        <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain mx-auto transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">
       </a>
     </div>
     <div class="flex items-center justify-center md:justify-end gap-3 order-2 md:order-3">
@@ -589,7 +589,6 @@ tailwind.config = {
     let mensajeWhatsAppInterno = '';
 
     let cotizacionDolar = 1535;
-    const TARIFA_GRADUADO_BASE_USD = 80;
     const TARIFA_SESION_USD = 120;
 
     const btnEvs = document.querySelectorAll('.btn-ev');
@@ -621,6 +620,19 @@ tailwind.config = {
     const guestCountInput = document.getElementById('guest-count');
     const btnWhatsapp = document.getElementById('btn-whatsapp');
 
+    function resaltarBotonActivo(element, activo) {
+      if (!element) return;
+      if (activo) {
+        element.classList.remove('text-white', 'bg-white/5', 'sm:bg-zinc-800');
+        element.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        element.setAttribute('aria-pressed', 'true');
+      } else {
+        element.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        element.classList.add('text-white', 'bg-white/5', 'sm:bg-zinc-800');
+        element.setAttribute('aria-pressed', 'false');
+      }
+    }
+
     async function obtenerDolar() {
       try {
         const res = await fetch('https://dolarapi.com/v1/dolares/oficial');
@@ -643,14 +655,8 @@ tailwind.config = {
         btnSes1.classList.add('text-white', 'opacity-40', 'cursor-not-allowed');
 
         if (sesiones === 1) {
-          btnSes.forEach(b => {
-            b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-            b.classList.add('text-white');
-          });
-          btnSes.forEach(b => b.setAttribute('aria-pressed', 'false'));
-          btnSes2.classList.remove('text-white');
-          btnSes2.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-          btnSes2.setAttribute('aria-pressed', 'true');
+          btnSes.forEach(b => resaltarBotonActivo(b, false));
+          resaltarBotonActivo(btnSes2, true);
           sesiones = 2;
         }
       } else {
@@ -665,15 +671,11 @@ tailwind.config = {
         btnXPhoto.setAttribute('aria-disabled', 'true');
         btnExpress.setAttribute('aria-disabled', 'true');
         extraFotoUSD = 0;
-        btnXPhoto.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        btnXPhoto.classList.add('text-white');
-        btnXPhoto.setAttribute('aria-pressed', 'false');
+        resaltarBotonActivo(btnXPhoto, false);
         btnXPhoto.classList.add('opacity-40', 'cursor-not-allowed');
 
         extraExpressUSD = 0;
-        btnExpress.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        btnExpress.classList.add('text-white');
-        btnExpress.setAttribute('aria-pressed', 'false');
+        resaltarBotonActivo(btnExpress, false);
         btnExpress.classList.add('opacity-40', 'cursor-not-allowed');
       } else {
         btnXPhoto.disabled = false;
@@ -692,21 +694,15 @@ tailwind.config = {
         btnLive.setAttribute('aria-disabled', 'true');
         btnDrone.setAttribute('aria-disabled', 'true');
         extraVideoUSD = 0;
-        btnXVideo.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        btnXVideo.classList.add('text-white');
-        btnXVideo.setAttribute('aria-pressed', 'false');
+        resaltarBotonActivo(btnXVideo, false);
         btnXVideo.classList.add('opacity-40', 'cursor-not-allowed');
 
         extraLiveUSD = 0;
-        btnLive.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        btnLive.classList.add('text-white');
-        btnLive.setAttribute('aria-pressed', 'false');
+        resaltarBotonActivo(btnLive, false);
         btnLive.classList.add('opacity-40', 'cursor-not-allowed');
 
         extraDroneUSD = 0;
-        btnDrone.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        btnDrone.classList.add('text-white');
-        btnDrone.setAttribute('aria-pressed', 'false');
+        resaltarBotonActivo(btnDrone, false);
         btnDrone.classList.add('opacity-40', 'cursor-not-allowed');
       } else {
         btnXVideo.disabled = false;
@@ -776,13 +772,14 @@ tailwind.config = {
       let textoCobertura = '';
       if (tipoCobertura === 'foto') textoCobertura = 'Solo Foto';
       if (tipoCobertura === 'video') textoCobertura = 'Solo Video';
-      if (tipoCobertura === 'ambos') textoCobertura = 'PH & VIDEO';
+      if (tipoCobertura === 'ambos') textoCobertura = 'Foto + Video';
 
       let detallesEspecificos = '';
 
       if (tipoEvento === 'graduacion') {
         const cantGraduados = parseInt(gradQtyInput.value) || 0;
         detallesEspecificos += `• Cantidad de graduados: ${cantGraduados}\n`;
+        detallesEspecificos += `• Horas de servicio: ${horas} hs\n`;
 
         const momentosSeleccionados = [];
         document.querySelectorAll('.btn-grad-opt').forEach(btn => {
@@ -792,7 +789,7 @@ tailwind.config = {
         });
 
         if (momentosSeleccionados.length > 0) {
-          detallesEspecificos += `• Coberturas: ${momentosSeleccionados.join(', ')}\n`;
+          detallesEspecificos += `• Coberturas especiales: ${momentosSeleccionados.join(', ')}\n`;
         }
       } else {
         detallesEspecificos += `• Horas de servicio: ${horas} hs\n`;
@@ -844,17 +841,41 @@ tailwind.config = {
 
     function calcular() {
       let subtotalBaseUSD = 0;
+      let adicionalesSumUSD = 0;
 
       if (tipoEvento === 'graduacion') {
         const cantGraduados = parseInt(gradQtyInput.value) || 0;
-        const tarifaGraduado = (tipoCobertura === 'ambos') ? (TARIFA_GRADUADO_BASE_USD * 2) : TARIFA_GRADUADO_BASE_USD;
-        subtotalBaseUSD = cantGraduados * tarifaGraduado;
+        
+        let tarifaGraduadoHora = 40;
+        if (horas === 10) tarifaGraduadoHora = 50;
+        if (horas === 12) tarifaGraduadoHora = 60;
+
+        if (tipoCobertura === 'ambos') {
+          tarifaGraduadoHora *= 2;
+        }
+
+        let tarifaOpcionesGraduado = 0;
+        document.querySelectorAll('.btn-grad-opt').forEach(btn => {
+          if (btn.classList.contains('bg-amber-400')) {
+            let val = parseInt(btn.getAttribute('data-val')) || 4;
+            if (tipoCobertura === 'ambos') val *= 2;
+            tarifaOpcionesGraduado += val;
+          }
+        });
+
+        subtotalBaseUSD = cantGraduados * (tarifaGraduadoHora + tarifaOpcionesGraduado);
+
+        if (extraExpressUSD > 0) adicionalesSumUSD += 8;
+        if (extraLiveUSD > 0) adicionalesSumUSD += 12;
+        if (extraDroneUSD > 0) adicionalesSumUSD += 4;
+
       } else {
         const extraSesionesUSD = sesiones * TARIFA_SESION_USD;
         subtotalBaseUSD = (tarifaPorHoraUSD * horas) + extraSesionesUSD + extraFotoUSD + extraVideoUSD;
+        adicionalesSumUSD = extraExpressUSD + extraLiveUSD + extraDroneUSD;
       }
 
-      const totalUSD = subtotalBaseUSD + extraExpressUSD + extraLiveUSD + extraDroneUSD;
+      const totalUSD = subtotalBaseUSD + adicionalesSumUSD;
       const totalListaARS = totalUSD * cotizacionDolar;
 
       totalArsEl.textContent = `$${Math.round(totalListaARS).toLocaleString('es-AR')} ARS`;
@@ -868,13 +889,8 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-ev');
         if (!targetBtn) return;
-        btnEvs.forEach(b => {
-          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-          b.classList.add('text-white');
-        });
-        btnEvs.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.remove('text-white');
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnEvs.forEach(b => resaltarBotonActivo(b, false));
+        resaltarBotonActivo(targetBtn, true);
         tipoEvento = targetBtn.getAttribute('data-ev');
 
         if (tipoEvento === 'graduacion') {
@@ -898,12 +914,8 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-grad-opt');
         if (!targetBtn) return;
-        const activo = targetBtn.classList.toggle('bg-amber-400');
-        targetBtn.classList.toggle('text-zinc-950', activo);
-        targetBtn.classList.toggle('border-amber-400', activo);
-        targetBtn.classList.toggle('font-bold', activo);
-        targetBtn.classList.toggle('text-white', !activo);
-        targetBtn.setAttribute('aria-pressed', String(activo));
+        const estaActivo = targetBtn.classList.contains('bg-amber-400');
+        resaltarBotonActivo(targetBtn, !estaActivo);
         calcular();
       });
     });
@@ -912,13 +924,8 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-cob');
         if (!targetBtn) return;
-        btnCobs.forEach(b => {
-          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-          b.classList.add('text-white');
-        });
-        btnCobs.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.remove('text-white');
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnCobs.forEach(b => resaltarBotonActivo(b, false));
+        resaltarBotonActivo(targetBtn, true);
         tarifaPorHoraUSD = parseInt(targetBtn.getAttribute('data-tarifa'));
         tipoCobertura = targetBtn.getAttribute('data-tipo');
         actualizarDisponibilidad();
@@ -930,13 +937,8 @@ tailwind.config = {
       btn.addEventListener('click', (e) => {
         const targetBtn = e.target.closest('.btn-hr');
         if (!targetBtn) return;
-        btnHrs.forEach(b => {
-          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-          b.classList.add('text-white');
-        });
-        btnHrs.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.remove('text-white');
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnHrs.forEach(b => resaltarBotonActivo(b, false));
+        resaltarBotonActivo(targetBtn, true);
         horas = parseInt(targetBtn.getAttribute('data-horas'));
         calcular();
       });
@@ -950,13 +952,8 @@ tailwind.config = {
 
         if (tipoCobertura === 'ambos' && valSesion === 1) return;
 
-        btnSes.forEach(b => {
-          b.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-          b.classList.add('text-white');
-        });
-        btnSes.forEach(b => b.setAttribute('aria-pressed', String(b === targetBtn)));
-        targetBtn.classList.remove('text-white');
-        targetBtn.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
+        btnSes.forEach(b => resaltarBotonActivo(b, false));
+        resaltarBotonActivo(targetBtn, true);
         sesiones = valSesion;
         calcular();
       });
@@ -964,60 +961,40 @@ tailwind.config = {
 
     btnXPhoto.addEventListener('click', () => {
       if (tipoCobertura === 'video') return;
-      const activo = btnXPhoto.classList.toggle('bg-amber-400');
-      btnXPhoto.classList.toggle('text-zinc-950', activo);
-      btnXPhoto.classList.toggle('border-amber-400', activo);
-      btnXPhoto.classList.toggle('font-bold', activo);
-      btnXPhoto.classList.toggle('text-white', !activo);
-      btnXPhoto.setAttribute('aria-pressed', String(activo));
+      const activo = !btnXPhoto.classList.contains('bg-amber-400');
+      resaltarBotonActivo(btnXPhoto, activo);
       extraFotoUSD = activo ? parseInt(btnXPhoto.getAttribute('data-val')) : 0;
       calcular();
     });
 
     btnXVideo.addEventListener('click', () => {
       if (tipoCobertura === 'foto') return;
-      const activo = btnXVideo.classList.toggle('bg-amber-400');
-      btnXVideo.classList.toggle('text-zinc-950', activo);
-      btnXVideo.classList.toggle('border-amber-400', activo);
-      btnXVideo.classList.toggle('font-bold', activo);
-      btnXVideo.classList.toggle('text-white', !activo);
-      btnXVideo.setAttribute('aria-pressed', String(activo));
+      const activo = !btnXVideo.classList.contains('bg-amber-400');
+      resaltarBotonActivo(btnXVideo, activo);
       extraVideoUSD = activo ? parseInt(btnXVideo.getAttribute('data-val')) : 0;
       calcular();
     });
 
     btnExpress.addEventListener('click', () => {
       if (tipoCobertura === 'video') return;
-      const activo = btnExpress.classList.toggle('bg-amber-400');
-      btnExpress.classList.toggle('text-zinc-950', activo);
-      btnExpress.classList.toggle('border-amber-400', activo);
-      btnExpress.classList.toggle('font-bold', activo);
-      btnExpress.classList.toggle('text-white', !activo);
-      btnExpress.setAttribute('aria-pressed', String(activo));
+      const activo = !btnExpress.classList.contains('bg-amber-400');
+      resaltarBotonActivo(btnExpress, activo);
       extraExpressUSD = activo ? parseInt(btnExpress.getAttribute('data-val')) : 0;
       calcular();
     });
 
     btnLive.addEventListener('click', () => {
       if (tipoCobertura === 'foto') return;
-      const activo = btnLive.classList.toggle('bg-amber-400');
-      btnLive.classList.toggle('text-zinc-950', activo);
-      btnLive.classList.toggle('border-amber-400', activo);
-      btnLive.classList.toggle('font-bold', activo);
-      btnLive.classList.toggle('text-white', !activo);
-      btnLive.setAttribute('aria-pressed', String(activo));
+      const activo = !btnLive.classList.contains('bg-amber-400');
+      resaltarBotonActivo(btnLive, activo);
       extraLiveUSD = activo ? parseInt(btnLive.getAttribute('data-val')) : 0;
       calcular();
     });
 
     btnDrone.addEventListener('click', () => {
       if (tipoCobertura === 'foto') return;
-      const activo = btnDrone.classList.toggle('bg-amber-400');
-      btnDrone.classList.toggle('text-zinc-950', activo);
-      btnDrone.classList.toggle('border-amber-400', activo);
-      btnDrone.classList.toggle('font-bold', activo);
-      btnDrone.classList.toggle('text-white', !activo);
-      btnDrone.setAttribute('aria-pressed', String(activo));
+      const activo = !btnDrone.classList.contains('bg-amber-400');
+      resaltarBotonActivo(btnDrone, activo);
       extraDroneUSD = activo ? parseInt(btnDrone.getAttribute('data-val')) : 0;
       calcular();
     });
@@ -1038,9 +1015,7 @@ tailwind.config = {
       const activarBotonInicial = (grupo) => {
         const primero = grupo[0];
         if (primero) {
-          primero.classList.remove('text-white');
-          primero.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-          primero.setAttribute('aria-pressed', 'true');
+          resaltarBotonActivo(primero, true);
         }
       };
 
@@ -1050,7 +1025,7 @@ tailwind.config = {
       activarBotonInicial(btnSes);
 
       document.querySelectorAll('.btn-grad-opt, .btn-eq, .btn-add').forEach(b => {
-        b.setAttribute('aria-pressed', 'false');
+        resaltarBotonActivo(b, false);
       });
       actualizarDisponibilidad();
       

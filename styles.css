@@ -159,10 +159,11 @@ transition: transform 7s var(--ease);
 transform: scale(1);
 }
 
-#hero-content img[src="titulo.svg"] {
+#hero-title img {
 max-width: 750px !important;
 width: 100% !important;
 height: auto !important;
+filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.28));
 }
 
 .reveal {
@@ -228,15 +229,6 @@ transition: opacity 0.4s var(--ease);
 opacity: 1;
 }
 
-#cal-grid {
-transition: opacity 0.25s, transform 0.3s var(--ease);
-}
-
-#cal-grid.swap {
-opacity: 0;
-transform: translateY(8px);
-}
-
 .field {
 width: 100%;
 padding: 0.875rem 1rem;
@@ -265,25 +257,6 @@ color: #cbd5e1;
 margin-bottom: 0.5rem;
 }
 
-@keyframes goldGradientMove {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
-}
-
-.animated-gradient-border {
-position: relative;
-border: 1px solid transparent !important;
-background-image:
-linear-gradient(var(--color-warm-950), var(--color-warm-950)),
-linear-gradient(115deg, #d4af37, #ffffff, #e6c875, #7a5c1a, #d4af37) !important;
-background-origin: border-box !important;
-background-clip: padding-box, border-box !important;
-background-size: 300% 300% !important;
-animation: goldGradientMove 8s ease infinite;
-box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
-}
-
 .btn-glow {
 position: relative;
 transition: all 0.3s var(--ease);
@@ -292,11 +265,6 @@ transition: all 0.3s var(--ease);
 .btn-glow:hover {
 box-shadow: 0 8px 24px rgba(185, 152, 86, 0.16);
 transform: translateY(-1px);
-}
-
-.neon-glow-active {
-box-shadow: 0 0 15px rgba(230, 200, 117, 0.35), inset 0 0 10px rgba(212, 175, 55, 0.15) !important;
-border-color: var(--color-gold-400) !important;
 }
 
 .opt {
@@ -316,10 +284,6 @@ box-shadow: 0 4px 16px rgba(185, 152, 86, 0.18) !important;
 
 #main-header .glass-panel {
 border-radius: 0 0 1.25rem 1.25rem;
-}
-
-#hero-title img {
-filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.28));
 }
 
 #proyectos {
@@ -375,8 +339,5 @@ scroll-behavior: auto !important;
 .reveal {
 opacity: 1 !important;
 transform: none !important;
-}
-.animated-gradient-border {
-animation: none !important;
 }
 }

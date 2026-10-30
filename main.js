@@ -548,3 +548,102 @@ function initPresupuestador() {
       btnSes.forEach(b => resaltarBotonActivo(b, false));
       resaltarBotonActivo(targetBtn, true);
       sesiones = valSesion;
+      calcular();
+    });
+  });
+
+  const btnXPhoto = $('#btn-xphoto');
+  const btnXVideo = $('#btn-xvideo');
+  const btnExpress = $('#btn-express');
+  const btnLive = $('#btn-live');
+  const btnDrone = $('#btn-drone');
+
+  btnXPhoto?.addEventListener('click', () => {
+    if (tipoCobertura === 'video') return;
+    const activo = !btnXPhoto.classList.contains('bg-amber-400');
+    resaltarBotonActivo(btnXPhoto, activo);
+    extraFotoUSD = activo ? parseInt(btnXPhoto.getAttribute('data-val')) : 0;
+    calcular();
+  });
+
+  btnXVideo?.addEventListener('click', () => {
+    if (tipoCobertura === 'foto') return;
+    const activo = !btnXVideo.classList.contains('bg-amber-400');
+    resaltarBotonActivo(btnXVideo, activo);
+    extraVideoUSD = activo ? parseInt(btnXVideo.getAttribute('data-val')) : 0;
+    calcular();
+  });
+
+  btnExpress?.addEventListener('click', () => {
+    if (tipoCobertura === 'video') return;
+    const activo = !btnExpress.classList.contains('bg-amber-400');
+    resaltarBotonActivo(btnExpress, activo);
+    extraExpressUSD = activo ? parseInt(btnExpress.getAttribute('data-val')) : 0;
+    calcular();
+  });
+
+  btnLive?.addEventListener('click', () => {
+    if (tipoCobertura === 'foto') return;
+    const activo = !btnLive.classList.contains('bg-amber-400');
+    resaltarBotonActivo(btnLive, activo);
+    extraLiveUSD = activo ? parseInt(btnLive.getAttribute('data-val')) : 0;
+    calcular();
+  });
+
+  btnDrone?.addEventListener('click', () => {
+    if (tipoCobertura === 'foto') return;
+    const activo = !btnDrone.classList.contains('bg-amber-400');
+    resaltarBotonActivo(btnDrone, activo);
+    extraDroneUSD = activo ? parseInt(btnDrone.getAttribute('data-val')) : 0;
+    calcular();
+  });
+
+  $('#client-name')?.addEventListener('input', () => generarMensajeWhatsApp());
+  $('#client-phone')?.addEventListener('input', () => generarMensajeWhatsApp());
+  $('#event-date')?.addEventListener('input', () => generarMensajeWhatsApp());
+  $('#venue-name')?.addEventListener('input', () => generarMensajeWhatsApp());
+  $('#guest-count')?.addEventListener('input', () => generarMensajeWhatsApp());
+
+  $('#btn-whatsapp')?.addEventListener('click', () => {
+    const text = encodeURIComponent(mensajeWhatsAppInterno);
+    const url = `https://wa.me/5493492591128?text=${text}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
+
+  const activarBotonInicial = (grupo) => { if (grupo[0]) resaltarBotonActivo(grupo[0], true); };
+  activarBotonInicial(btnEvs);
+  activarBotonInicial(btnCobs);
+  activarBotonInicial(btnHrs);
+  activarBotonInicial(btnSes);
+
+  $$('.btn-grad-opt, .btn-eq, .btn-add').forEach(b => resaltarBotonActivo(b, false));
+  actualizarDisponibilidad();
+  obtenerDolar();
+}
+
+// ==========================================================================
+// 5. Inicialización General y Navegación Suave
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const year = $('#current-year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  document.addEventListener('click', e => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    const targetId = anchor.getAttribute('href');
+    if (targetId === '#' || !targetId) return;
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      e.preventDefault();
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  initVideoSlider();
+  initPresupuestador();
+
+  setTimeout(() => {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }, 50);
+});

@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * Luca Monteserin © | PH + VIDEO - Script Principal Definitivo Completo
+ * Luca Monteserin © | PH + VIDEO - Script Principal Definitivo y Blindado
  * ==========================================================================
  */
 
@@ -16,13 +16,11 @@ function toast(m) {
   const t = $('#toast');
   if (!t) return;
   $('#toast-msg').textContent = m;
-  t.classList.remove('hidden');
   t.classList.add('flex', 'show');
+  t.classList.remove('hidden');
   clearTimeout(t._t);
   t._t = setTimeout(() => { t.classList.add('hidden'); t.classList.remove('flex', 'show'); }, 3500);
 }
-
-const go = id => $(id)?.scrollIntoView({ behavior: 'smooth' });
 
 // ==========================================================================
 // 1. Control del Header y Hero
@@ -128,43 +126,7 @@ if (menuBtn && fullscreenMenu) {
 }
 
 // ==========================================================================
-// 2. Efecto Spotlight y Animaciones Reveal
-// ==========================================================================
-const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
-if (!prefersReducedMotion && finePointer) {
-  const spotlight = document.createElement('div');
-  spotlight.className = 'spotlight-glow';
-  spotlight.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(spotlight);
-  let mouseX = 0, mouseY = 0, spotlightX = 0, spotlightY = 0;
-  window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; spotlight.style.opacity = '1'; }, { passive: true });
-  document.addEventListener('mouseleave', () => { spotlight.style.opacity = '0'; });
-  const renderSpotlight = () => {
-    if (!document.hidden) {
-      spotlightX += (mouseX - spotlightX) * 0.1;
-      spotlightY += (mouseY - spotlightY) * 0.1;
-      spotlight.style.left = `${spotlightX}px`;
-      spotlight.style.top = `${spotlightY}px`;
-    }
-    requestAnimationFrame(renderSpotlight);
-  };
-  renderSpotlight();
-}
-
-document.body.classList.add('js-ready');
-const io = new IntersectionObserver(es => es.forEach(e => { 
-  if (e.isIntersecting) { 
-    e.target.classList.add('on'); 
-    e.target.style.opacity = '1';
-    e.target.style.transform = 'none';
-    io.unobserve(e.target); 
-  } 
-}), { threshold: 0.01, rootMargin: '0px 0px 50px 0px' });
-
-$$('.reveal').forEach(el => io.observe(el));
-
-// ==========================================================================
-// 3. Slider Cinemático de Videos (100% Funcional sin Fallos)
+// 2. Slider Cinemático de Videos (100% Funcional y Blindado)
 // ==========================================================================
 function initVideoSlider() {
   const sliderSection = document.getElementById('slider-cinematico');
@@ -222,7 +184,7 @@ function initVideoSlider() {
 }
 
 // ==========================================================================
-// 4. Lógica del Presupuestador de Eventos
+// 3. Lógica del Presupuestador de Eventos
 // ==========================================================================
 let tipoEvento = 'quince';
 let tarifaPorHoraUSD = 60;
@@ -622,18 +584,21 @@ function initPresupuestador() {
 }
 
 // ==========================================================================
-// 5. Inicialización General y Navegación Suave
+// 4. Inicialización General y Navegación Limpia (Sin alterar la URL con Hash)
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   const year = $('#current-year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // Intercepta todos los clics en enlaces con ancla y hace scroll suave limpio sin alterar la barra de direcciones
   document.addEventListener('click', e => {
-    const anchor = e.target.closest('a[href^="#"]');
+    const anchor = e.target.closest('a[href^="#"], [data-target]');
     if (!anchor) return;
-    const targetId = anchor.getAttribute('href');
-    if (targetId === '#' || !targetId) return;
-    const targetElement = document.querySelector(targetId);
+    
+    const targetSelector = anchor.getAttribute('href') || anchor.getAttribute('data-target');
+    if (!targetSelector || targetSelector === '#') return;
+
+    const targetElement = document.querySelector(targetSelector);
     if (targetElement) {
       e.preventDefault();
       targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });

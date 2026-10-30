@@ -2,24 +2,56 @@
 <html lang="es" class="dark">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV4LKFYDF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV4LKFYDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-TRV4LKFYDF');
-</script>
+    gtag('config', 'G-TRV4LKFYDF');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luca Monteserin &copy;</title>
+  <title>Luca Monteserin · Fotógrafo & Filmmaker</title>
+  <meta name="description" content="Servicio integral de Fotografía y Filmación de Quinceaños, Bodas y Graduaciones. Descubrí trabajos recientes y armá una cotización para tu evento. ¿Planeamos el tuyo?">
+  <meta name="theme-color" content="#11100e">
+  <link rel="canonical" href="https://www.lucamonteserin.com.ar/galeria.html">
   
+  <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lucamonteserin.com.ar/galeria.html">
   <meta property="og:title" content="Galería Completa · Luca Monteserin">
   <meta property="og:description" content="Explorá nuestros proyectos destacados, quinceaños, bodas, graduaciones y más.">
-  <meta property="og:image" src="logo.svg">
+  <meta property="og:image" content="https://www.lucamonteserin.com.ar/portada.jpg">
+  
+  <!-- Thumbnail para buscadores -->
+  <meta name="thumbnail" content="https://www.lucamonteserin.com.ar/portada.jpg">
+
+  <!-- Favicons y Manifiesto -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+
   <link rel="stylesheet" href="styles.css">  
-  <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://cdn.picflow.com" crossorigin>
+
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Luca Monteserin",
+    "url": "https://www.lucamonteserin.com.ar",
+    "image": "https://www.lucamonteserin.com.ar/portada.jpg",
+    "primaryImageOfPage": "https://www.lucamonteserin.com.ar/portada.jpg",
+    "description": "Fotografía y Filmación de Quinceaños, Bodas y Graduaciones.",
+    "telephone": "+5493492591128",
+    "sameAs": ["https://instagram.com/lucamonteserin"]
+  }
+  </script>
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,9 +65,9 @@ tailwind.config = {
       fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
       colors: {
         gold: {
-          300: '#fff',
-          400: 'rgba(230, 200, 117, 0.7)',
-          500: 'rgba(212, 175, 55, 0.7)'
+          300: '#f2e8ce',
+          400: '#d7bf88',
+          500: '#b99856'
         },
         warm: {
           950: '#0c0b0a',
@@ -49,31 +81,40 @@ tailwind.config = {
 </script>
 </head>
 <body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
-<a href="#full-gallery" class="skip">Saltar al contenido`</a>
+<a href="#full-gallery" class="skip">Saltar al contenido</a>
 
-<header id="main-header" class="fixed top-0 z-50 w-full glass-panel">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
-    <a href="index.html" class="inline-block flex-shrink-0 group">
-      <img src="logo.svg" alt="Logo Luca Monteserin" class="h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
+<header id="main-header" class="fixed top-0 z-50 w-full">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
+    
+    <!-- Logo a la izquierda en PC, centrado absoluto solo en móviles -->
+    <a href="index.html#hero" class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 group flex-shrink-0" aria-label="Luca Monteserin, volver al inicio">
+      <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
+
+    <!-- Menú desktop -->
     <nav class="hidden lg:flex items-center gap-8 text-xs tracking-widest text-slate-200 font-medium" aria-label="Principal">
+      <a class="nav-link" href="index.html#proyectos">Destacados</a>
       <a class="nav-link text-gold-400 font-bold" href="galeria.html">Galería</a>
       <a class="nav-link" href="equipo.html">Equipo</a>
       <a class="nav-link" href="index.html#presupuesto-seccion">Presupuesto</a>
       <a class="nav-link" href="index.html#contacto">Contacto</a>
     </nav>
-    <div class="flex items-center gap-3">
+
+    <!-- Botón Cotizar y Menú Móvil -->
+    <div class="flex items-center gap-3 z-10 ml-auto lg:ml-0">
       <a href="index.html#presupuesto-seccion" class="btn btn-glow hidden sm:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 rounded-full"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
-      <button id="menu-btn" class="lg:hidden p-2 text-slate-200" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+      <button id="menu-btn" class="lg:hidden p-2 text-slate-200 rounded-full hover:bg-white/5" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden glass-panel px-6 py-6 space-y-4 text-sm font-medium tracking-widest">
-    <a href="galeria.html" class="block text-gold-400 font-bold">Galería</a>
-    <a href="equipo.html" class="block">Equipo</a>
-    <a href="index.html#presupuesto-seccion" class="block">Presupuesto</a>
-    <a href="index.html#contacto" class="block">Contacto</a>
-    <a href="index.html#presupuesto-seccion" class="flex justify-center gap-2 w-full py-3 text-xs font-bold text-warm-950 bg-gold-400 rounded-full"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
-  </div>
+
+  <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden lg:hidden glass-panel fixed top-20 left-4 right-4 z-50 p-6 space-y-4 text-sm font-medium tracking-widest rounded-2xl shadow-2xl border border-white/10">
+    <a href="index.html#proyectos" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Destacados</a>
+    <a href="galeria.html" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Galería</a>
+    <a href="equipo.html" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Equipo</a>
+    <a href="index.html#presupuesto-seccion" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Presupuesto</a>
+    <a href="index.html#contacto" class="block py-2 text-slate-200 hover:text-gold-400">Contacto</a>
+    <a href="index.html#presupuesto-seccion" class="flex justify-center items-center gap-2 w-full py-3 text-xs font-bold text-warm-950 bg-gold-400 rounded-full shadow-lg"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
+  </nav>
 </header>
 
 <main id="main" class="flex-grow pt-32 pb-24">
@@ -365,15 +406,12 @@ tailwind.config = {
 
 <footer class="relative z-20 w-full border-t border-amber-500/10 bg-warm-950 py-8">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6">
-    <div class="text-sm text-gray-400 order-3 md:order-1 text-center md:text-left flex items-center justify-center md:justify-start gap-4">
-      <p>Luca Monteserin &copy; 2026</p>
-      <a href="admin.html" class="text-xs text-slate-600 hover:text-gold-400 transition-colors flex items-center gap-1" title="Panel de Administración">
-        <i data-lucide="lock" class="w-3 h-3"></i> Admin
-      </a>
+    <div class="text-sm text-gray-400 order-3 md:order-1 text-center md:text-left">
+      <p>Luca Monteserin &copy; <span id="current-year">2026</span></p>
     </div>
     <div class="flex justify-center order-1 md:order-2">
-      <a href="#" class="inline-block group">
-        <img src="logo.svg" alt="Logo" class="h-10 w-auto object-contain mx-auto transition-transform duration-500 ease-out group-hover:scale-110">
+      <a href="index.html#hero" class="inline-block group" aria-label="Luca Monteserin, volver al inicio">
+        <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain mx-auto transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">
       </a>
     </div>
     <div class="flex items-center justify-center md:justify-end gap-3 order-2 md:order-3">
@@ -385,7 +423,7 @@ tailwind.config = {
       </div>
       <div class="relative group flex items-center justify-center">
         <span class="absolute right-full mr-3 px-3 py-1 rounded-full bg-warm-900 border border-gold-500/30 text-gold-400 text-xs font-medium tracking-wider whitespace-nowrap opacity-0 translate-x-1 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0 shadow-lg z-30">@lucamonteserinph</span>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colors p-2" aria-label="YouTube">
+        <a href="https://youtube.com/@lucamonteserinph" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colors p-2" aria-label="YouTube, Luca Monteserin">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </a>
       </div>

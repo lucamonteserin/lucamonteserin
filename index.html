@@ -95,7 +95,7 @@ tailwind.config = {
     <!-- Botón de Menú a la derecha -->
     <div class="flex items-center gap-3 z-20 ml-auto">
       <button id="menu-btn" type="button" class="p-2.5 text-slate-200 rounded-full hover:bg-white/10 transition-colors focus:outline-none cursor-pointer" aria-label="Abrir menú" aria-expanded="false" aria-controls="fullscreen-menu">
-        <i data-lucide="menu" class="w-7 h-7"></i>
+        <i data-lucide="menu" class="w-7 h-7 pointer-events-none"></i>
       </button>
     </div>
   </div>
@@ -104,7 +104,7 @@ tailwind.config = {
 <!-- Menú Overlay a pantalla completa -->
 <div id="fullscreen-menu" aria-label="Navegación principal" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-warm-950/95 backdrop-blur-2xl transition-all duration-300">
   <button id="close-menu-btn" type="button" class="absolute top-6 right-6 sm:top-8 sm:right-10 p-3 text-slate-200 hover:text-gold-400 hover:bg-white/5 rounded-full transition-all focus:outline-none cursor-pointer" aria-label="Cerrar menú">
-    <i data-lucide="x" class="w-8 h-8"></i>
+    <i data-lucide="x" class="w-8 h-8 pointer-events-none"></i>
   </button>
 
   <nav class="flex flex-col items-center space-y-6 text-center max-w-lg px-6">
@@ -509,43 +509,35 @@ tailwind.config = {
       }
     });
 
-    // Lógica del Menú Overlay Fullscreen robustecida
-    function initMenu() {
-      const menuBtn = document.getElementById('menu-btn');
-      const closeMenuBtn = document.getElementById('close-menu-btn');
+    // Delegación de eventos global para apertura y cierre de Menú
+    function openMenu() {
       const fullscreenMenu = document.getElementById('fullscreen-menu');
-      const menuNavLinks = document.querySelectorAll('.menu-nav-link');
-
-      function openMenu() {
-        if (!fullscreenMenu) return;
-        fullscreenMenu.classList.remove('hidden');
-        fullscreenMenu.classList.add('flex');
-        document.body.classList.add('overflow-hidden');
-        if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      }
-
-      function closeMenu() {
-        if (!fullscreenMenu) return;
-        fullscreenMenu.classList.add('hidden');
-        fullscreenMenu.classList.remove('flex');
-        document.body.classList.remove('overflow-hidden');
-        if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-      }
-
-      if (menuBtn) menuBtn.onclick = openMenu;
-      if (closeMenuBtn) closeMenuBtn.onclick = closeMenu;
-
-      menuNavLinks.forEach(link => {
-        link.onclick = closeMenu;
-      });
+      const menuBtn = document.getElementById('menu-btn');
+      if (!fullscreenMenu) return;
+      fullscreenMenu.classList.remove('hidden');
+      fullscreenMenu.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+      if (typeof lucide !== 'undefined') lucide.createIcons();
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initMenu);
-    } else {
-      initMenu();
+    function closeMenu() {
+      const fullscreenMenu = document.getElementById('fullscreen-menu');
+      const menuBtn = document.getElementById('menu-btn');
+      if (!fullscreenMenu) return;
+      fullscreenMenu.classList.add('hidden');
+      fullscreenMenu.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
     }
+
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('#menu-btn')) {
+        openMenu();
+      } else if (e.target.closest('#close-menu-btn') || e.target.closest('.menu-nav-link')) {
+        closeMenu();
+      }
+    });
 
     let tipoEvento = 'quince';
     let tarifaPorHoraUSD = 60;

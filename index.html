@@ -101,14 +101,13 @@ tailwind.config = {
   </div>
 </header>
 
-<!-- Menú Overlay a pantalla completa corregido -->
+<!-- Menú Overlay a pantalla completa -->
 <div id="fullscreen-menu" aria-label="Navegación principal" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-warm-950/95 backdrop-blur-2xl transition-all duration-300">
   <button id="close-menu-btn" type="button" class="absolute top-6 right-6 sm:top-8 sm:right-10 p-3 text-slate-200 hover:text-gold-400 hover:bg-white/5 rounded-full transition-all focus:outline-none cursor-pointer" aria-label="Cerrar menú">
     <i data-lucide="x" class="w-8 h-8 pointer-events-none"></i>
   </button>
 
   <nav class="flex flex-col items-center space-y-6 text-center max-w-lg px-6">
-    <!-- Links Principales -->
     <a href="#proyectos" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Destacados</a>
     <a href="galeria" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Galería</a>
     <a href="equipo" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Equipo</a>
@@ -116,7 +115,6 @@ tailwind.config = {
 
     <div class="w-16 h-px bg-white/10 my-4"></div>
 
-    <!-- Categorías Especiales -->
     <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-2">
       <a href="galeria?cat=quince" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Quinceaños</a>
       <a href="galeria?cat=bodas" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Bodas</a>
@@ -141,7 +139,6 @@ tailwind.config = {
       <h1 id="hero-title" class="w-full max-w-2xl mb-5"><img src="titulo.svg" alt="Fotografía y filmación para tu gran noche" class="w-full h-auto object-contain drop-shadow-lg" /></h1>
       <p class="max-w-xl text-sm sm:text-base text-white/85 leading-relaxed">QUINCEAÑOS, BODAS Y GRADUACIONES</p>
       
-      <!-- Botones unificados en ancho, alto y disposición (manteniendo tu diseño exacto) -->
       <div class="mt-6 flex flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md">
         <a href="#presupuesto-seccion" class="btn btn-glow flex-1 h-12 px-4 rounded-full text-xs font-bold uppercase tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 flex items-center justify-center gap-2 shadow-lg"><i data-lucide="calculator" class="w-4 h-4 pointer-events-none"></i><span>Presupuestar</span></a>
         <a href="galeria" class="btn flex-1 h-12 px-4 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-2 shadow-lg"><i data-lucide="grid" class="w-4 h-4 text-gold-400 pointer-events-none"></i><span>Ver galería</span></a>
@@ -181,7 +178,7 @@ tailwind.config = {
         <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">AGO & FRAN</h3></div>
       </a>
 
-      <!-- Franja de píxeles solucionada con contenedor robusto de desbordamiento oculto -->
+      <!-- Tarjeta Dai & Pablo Corregida -->
       <a href="https://lucamonteserin.picflow.com/daiypablo" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
         <div class="aspect-video overflow-hidden bg-warm-900 relative"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/f0a1cf7f-9d97-4826-b784-9ea0214a73cb.jpg" alt="DAI & PABLO" class="w-full h-full object-cover scale-[1.01] transition-transform duration-500 group-hover:scale-105 block"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent pointer-events-none"></div>
@@ -222,6 +219,7 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- Slider de Videos Infinito (Con preload metadata activado) -->
 <section id="slider-cinematico" class="relative w-full py-0 my-0 bg-warm-950 overflow-hidden z-20 select-none">
   <div class="absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-warm-950 to-transparent z-20 pointer-events-none"></div>
   <div class="absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-warm-950 to-transparent z-20 pointer-events-none"></div>
@@ -229,30 +227,30 @@ tailwind.config = {
   <div id="marquee-track" class="flex w-max cursor-ew-resize will-change-transform leading-none">
     <div class="flex shrink-0">
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/2a23ccbc-5946-4df6-a714-6de0966b9b7c/2a23ccbc-5946-4df6-a714-6de0966b9b7c.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/2a23ccbc-5946-4df6-a714-6de0966b9b7c/2a23ccbc-5946-4df6-a714-6de0966b9b7c.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/7e0db047-e915-432e-8e41-4160cfe75200/7e0db047-e915-432e-8e41-4160cfe75200.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/7e0db047-e915-432e-8e41-4160cfe75200/7e0db047-e915-432e-8e41-4160cfe75200.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/caa5af15-21d2-41a6-99a9-8b274727eb9b/caa5af15-21d2-41a6-99a9-8b274727eb9b.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/caa5af15-21d2-41a6-99a9-8b274727eb9b/caa5af15-21d2-41a6-99a9-8b274727eb9b.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
     </div>
     <div class="flex shrink-0" aria-hidden="true">
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d/c2e30dfe-f8f7-447d-a927-8745c5fe4d2d.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/2a23ccbc-5946-4df6-a714-6de0966b9b7c/2a23ccbc-5946-4df6-a714-6de0966b9b7c.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/2a23ccbc-5946-4df6-a714-6de0966b9b7c/2a23ccbc-5946-4df6-a714-6de0966b9b7c.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/7e0db047-e915-432e-8e41-4160cfe75200/7e0db047-e915-432e-8e41-4160cfe75200.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/7e0db047-e915-432e-8e41-4160cfe75200/7e0db047-e915-432e-8e41-4160cfe75200.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
       <div class="w-80 sm:w-[32rem] md:w-[38rem] h-80 sm:h-96 border-r border-white/10 overflow-hidden relative group bg-black">
-        <video src="https://cdn.picflow.com/assets/videos/caa5af15-21d2-41a6-99a9-8b274727eb9b/caa5af15-21d2-41a6-99a9-8b274727eb9b.mp4" muted loop playsinline preload="none" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
+        <video src="https://cdn.picflow.com/assets/videos/caa5af15-21d2-41a6-99a9-8b274727eb9b/caa5af15-21d2-41a6-99a9-8b274727eb9b.mp4" muted loop playsinline preload="metadata" aria-hidden="true" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 block"></video>
       </div>
     </div>
   </div>
@@ -438,7 +436,6 @@ tailwind.config = {
               </div>
               <div>
                 <label for="event-date" class="block text-xs text-zinc-400 mb-1">Fecha del evento:</label>
-                <!-- Input de fecha estandarizado exactamente igual en dimensiones y padding que los demás -->
                 <input type="date" id="event-date" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400">
               </div>
             </div>
@@ -496,521 +493,6 @@ tailwind.config = {
 
 <div id="toast" role="status" class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 px-5 py-4 rounded-2xl glass-panel border border-gold-500/30 text-white text-sm shadow-2xl"><i data-lucide="check-circle" class="w-4 h-4 text-gold-400"></i><span id="toast-msg"></span></div>
 
-  <script>
-    // Dinámica del Header según el Scroll sobre la sección Hero
-    const header = document.getElementById('main-header');
-    const heroSection = document.getElementById('hero');
-
-    window.addEventListener('scroll', () => {
-      const heroHeight = heroSection ? heroSection.offsetHeight : 500;
-      if (window.scrollY > heroHeight - 100) {
-        header.classList.remove('bg-transparent', 'border-transparent');
-        header.classList.add('bg-warm-950/80', 'backdrop-blur-md', 'border-white/10');
-      } else {
-        header.classList.remove('bg-warm-950/80', 'backdrop-blur-md', 'border-white/10');
-        header.classList.add('bg-transparent', 'border-transparent');
-      }
-    });
-
-    // Menú móvil corregido conectado a #fullscreen-menu
-    const menuBtn = document.getElementById('menu-btn');
-    const fullscreenMenu = document.getElementById('fullscreen-menu');
-    const closeMenuBtn = document.getElementById('close-menu-btn');
-
-    function openMenu() {
-      if (!fullscreenMenu) return;
-      fullscreenMenu.classList.remove('hidden');
-      fullscreenMenu.classList.add('flex');
-      document.body.classList.add('overflow-hidden');
-      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
-      if (typeof lucide !== 'undefined') lucide.createIcons();
-    }
-
-    function closeMenu() {
-      if (!fullscreenMenu) return;
-      fullscreenMenu.classList.add('hidden');
-      fullscreenMenu.classList.remove('flex');
-      document.body.classList.remove('overflow-hidden');
-      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-    }
-
-    if (menuBtn && fullscreenMenu) {
-      menuBtn.addEventListener('click', openMenu);
-      if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
-      fullscreenMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeMenu);
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !fullscreenMenu.classList.contains('hidden')) {
-          closeMenu();
-        }
-      });
-    }
-
-    let tipoEvento = 'quince';
-    let tarifaPorHoraUSD = 60;
-    let horas = 8;
-    let sesiones = 0;
-    let tipoCobertura = 'foto';
-    let extraFotoUSD = 0;
-    let extraVideoUSD = 0;
-    let extraExpressUSD = 0;
-    let extraLiveUSD = 0;
-    let extraDroneUSD = 0;
-
-    let mensajeWhatsAppInterno = '';
-
-    let cotizacionDolar = 1535;
-    const TARIFA_SESION_USD = 120;
-
-    const btnEvs = document.querySelectorAll('.btn-ev');
-    const btnCobs = document.querySelectorAll('.btn-cob');
-    const btnHrs = document.querySelectorAll('.btn-hr');
-    const btnSes = document.querySelectorAll('.btn-ses');
-    const btnSes1 = document.getElementById('btn-ses-1');
-    const btnSes2 = document.getElementById('btn-ses-2');
-    const btnXPhoto = document.getElementById('btn-xphoto');
-    const btnXVideo = document.getElementById('btn-xvideo');
-    const btnExpress = document.getElementById('btn-express');
-    const btnLive = document.getElementById('btn-live');
-    const btnDrone = document.getElementById('btn-drone');
-    const totalArsEl = document.getElementById('total-ars');
-    const totalUsdEl = document.getElementById('total-usd');
-    const dolarLabel = document.getElementById('dolar-label');
-    const gradWrap = document.getElementById('grad-wrap');
-    const gradQtyInput = document.getElementById('grad-qty');
-    const equipmentOptions = document.getElementById('equipment-options');
-    const sessionOptions = document.getElementById('session-options');
-
-    const pagoEfectivoEl = document.getElementById('pago-efectivo');
-    const containerSinInteres = document.getElementById('container-sin-interes');
-
-    const clientNameInput = document.getElementById('client-name');
-    const clientPhoneInput = document.getElementById('client-phone');
-    const eventDateInput = document.getElementById('event-date');
-    const venueNameInput = document.getElementById('venue-name');
-    const guestCountInput = document.getElementById('guest-count');
-    const btnWhatsapp = document.getElementById('btn-whatsapp');
-
-    function resaltarBotonActivo(element, activo) {
-      if (!element) return;
-      if (activo) {
-        element.classList.remove('text-white', 'bg-white/5', 'sm:bg-zinc-800');
-        element.classList.add('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        element.setAttribute('aria-pressed', 'true');
-      } else {
-        element.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        element.classList.add('text-white', 'bg-white/5', 'sm:bg-zinc-800');
-        element.setAttribute('aria-pressed', 'false');
-      }
-    }
-
-    // API del Dólar optimizada con múltiples respaldos y alta estabilidad
-    async function obtenerDolar() {
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 3500);
-        const res = await fetch('https://dolarapi.com/v1/dolares/oficial', { signal: controller.signal });
-        clearTimeout(timeoutId);
-        const data = await res.json();
-        if (data && data.venta) {
-          cotizacionDolar = data.venta;
-          dolarLabel.textContent = `Dólar oficial: $${cotizacionDolar}`;
-        }
-      } catch (e) {
-        dolarLabel.textContent = `Dólar oficial: $${cotizacionDolar} (ref)`;
-      }
-      calcular();
-    }
-
-    function actualizarDisponibilidad() {
-      if (tipoCobertura === 'ambos') {
-        btnSes1.disabled = true;
-        btnSes1.setAttribute('aria-disabled', 'true');
-        btnSes1.classList.remove('bg-amber-400', 'text-zinc-950', 'border-amber-400', 'font-bold');
-        btnSes1.classList.add('text-white', 'opacity-40', 'cursor-not-allowed');
-
-        if (sesiones === 1) {
-          btnSes.forEach(b => resaltarBotonActivo(b, false));
-          resaltarBotonActivo(btnSes2, true);
-          sesiones = 2;
-        }
-      } else {
-        btnSes1.disabled = false;
-        btnSes1.setAttribute('aria-disabled', 'false');
-        btnSes1.classList.remove('opacity-40', 'cursor-not-allowed');
-      }
-
-      if (tipoCobertura === 'video') {
-        btnXPhoto.disabled = true;
-        btnExpress.disabled = true;
-        btnXPhoto.setAttribute('aria-disabled', 'true');
-        btnExpress.setAttribute('aria-disabled', 'true');
-        extraFotoUSD = 0;
-        resaltarBotonActivo(btnXPhoto, false);
-        btnXPhoto.classList.add('opacity-40', 'cursor-not-allowed');
-
-        extraExpressUSD = 0;
-        resaltarBotonActivo(btnExpress, false);
-        btnExpress.classList.add('opacity-40', 'cursor-not-allowed');
-      } else {
-        btnXPhoto.disabled = false;
-        btnExpress.disabled = false;
-        btnXPhoto.setAttribute('aria-disabled', 'false');
-        btnExpress.setAttribute('aria-disabled', 'false');
-        btnXPhoto.classList.remove('opacity-40', 'cursor-not-allowed');
-        btnExpress.classList.remove('opacity-40', 'cursor-not-allowed');
-      }
-
-      if (tipoCobertura === 'foto') {
-        btnXVideo.disabled = true;
-        btnLive.disabled = true;
-        btnDrone.disabled = true;
-        btnXVideo.setAttribute('aria-disabled', 'true');
-        btnLive.setAttribute('aria-disabled', 'true');
-        btnDrone.setAttribute('aria-disabled', 'true');
-        extraVideoUSD = 0;
-        resaltarBotonActivo(btnXVideo, false);
-        btnXVideo.classList.add('opacity-40', 'cursor-not-allowed');
-
-        extraLiveUSD = 0;
-        resaltarBotonActivo(btnLive, false);
-        btnLive.classList.add('opacity-40', 'cursor-not-allowed');
-
-        extraDroneUSD = 0;
-        resaltarBotonActivo(btnDrone, false);
-        btnDrone.classList.add('opacity-40', 'cursor-not-allowed');
-      } else {
-        btnXVideo.disabled = false;
-        btnLive.disabled = false;
-        btnDrone.disabled = false;
-        btnXVideo.setAttribute('aria-disabled', 'false');
-        btnLive.setAttribute('aria-disabled', 'false');
-        btnDrone.setAttribute('aria-disabled', 'false');
-        btnXVideo.classList.remove('opacity-40', 'cursor-not-allowed');
-        btnLive.classList.remove('opacity-40', 'cursor-not-allowed');
-        btnDrone.classList.remove('opacity-40', 'cursor-not-allowed');
-      }
-    }
-
-    function calcularFinanciacion(totalListaARS) {
-      const totalEfectivo = totalListaARS * 0.85;
-      pagoEfectivoEl.textContent = `$${Math.round(totalEfectivo).toLocaleString('es-AR')} ARS`;
-
-      const opcionesSinInteres = [3]; 
-
-      if (totalListaARS > 2700000) {
-        opcionesSinInteres.push(6, 9, 12);
-      } else if (totalListaARS > 1800000) {
-        opcionesSinInteres.push(6, 9);
-      } else if (totalListaARS > 900000) {
-        opcionesSinInteres.push(6);
-      }
-
-      containerSinInteres.innerHTML = '';
-      let resumenSinInteresTexto = '';
-
-      opcionesSinInteres.forEach(n => {
-        const valorCuota = totalListaARS / n;
-        const valorFormateado = Math.round(valorCuota).toLocaleString('es-AR');
-        
-        const row = document.createElement('div');
-        row.className = 'flex justify-between items-center py-0.5';
-        row.innerHTML = `
-          <span class="text-zinc-400 flex items-center gap-1.5">
-            <i data-lucide="calendar" class="w-4 h-4 text-sky-400"></i> ${n} Cuotas sin interés:
-          </span>
-          <span class="font-medium text-sky-400">${n}x $${valorFormateado} ARS</span>
-        `;
-        containerSinInteres.appendChild(row);
-
-        resumenSinInteresTexto += `• ${n} Cuotas sin interés: ${n}x $${valorFormateado} ARS\n`;
-      });
-
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-      return resumenSinInteresTexto;
-    }
-
-    function generarMensajeWhatsApp(resumenSinInteresTexto = '') {
-      const nombre = clientNameInput.value.trim() || 'Cliente';
-      const telefono = clientPhoneInput.value.trim();
-      const fecha = eventDateInput.value;
-      const salon = venueNameInput.value.trim();
-      const personas = guestCountInput.value.trim();
-
-      let textoEvento = '';
-      if (tipoEvento === 'quince') textoEvento = 'Quinceaños';
-      if (tipoEvento === 'boda') textoEvento = 'Boda';
-      if (tipoEvento === 'graduacion') textoEvento = 'Graduación';
-
-      let textoCobertura = '';
-      if (tipoCobertura === 'foto') textoCobertura = 'Solo Foto';
-      if (tipoCobertura === 'video') textoCobertura = 'Solo Video';
-      if (tipoCobertura === 'ambos') textoCobertura = 'Foto + Video';
-
-      let detallesEspecificos = '';
-
-      if (tipoEvento === 'graduacion') {
-        const cantGraduados = parseInt(gradQtyInput.value) || 0;
-        detallesEspecificos += `• Cantidad de graduados: ${cantGraduados}\n`;
-        detallesEspecificos += `• Horas de servicio: ${horas} hs\n`;
-
-        const momentosSeleccionados = [];
-        document.querySelectorAll('.btn-grad-opt').forEach(btn => {
-          if (btn.classList.contains('bg-amber-400')) {
-            momentosSeleccionados.push(btn.getAttribute('data-nombre'));
-          }
-        });
-
-        if (momentosSeleccionados.length > 0) {
-          detallesEspecificos += `• Coberturas especiales: ${momentosSeleccionados.join(', ')}\n`;
-        }
-      } else {
-        detallesEspecificos += `• Horas de servicio: ${horas} hs\n`;
-        detallesEspecificos += `• Sesiones previas: ${sesiones}\n`;
-
-        const equipoSel = [];
-        if (extraFotoUSD > 0) equipoSel.push('2do Fotógrafo');
-        if (extraVideoUSD > 0) equipoSel.push('2do Videógrafo');
-        if (equipoSel.length > 0) {
-          detallesEspecificos += `• Equipo adicional: ${equipoSel.join(', ')}\n`;
-        }
-      }
-
-      const adicionalesSel = [];
-      if (extraExpressUSD > 0) adicionalesSel.push('Fotos Exprés');
-      if (extraLiveUSD > 0) adicionalesSel.push('Edición en Vivo');
-      if (extraDroneUSD > 0) adicionalesSel.push('Tomas Aéreas');
-
-      if (adicionalesSel.length > 0) {
-        detallesEspecificos += `• Adicionales: ${adicionalesSel.join(', ')}\n`;
-      }
-
-      const totalARS = totalArsEl.textContent;
-      const totalUSD = totalUsdEl.textContent;
-      const totalEfectivo = pagoEfectivoEl.textContent;
-
-      let msg = `Hola! Mi nombre es ${nombre}.\n`;
-      msg += `Me gustaría cotizar el siguiente servicio:\n\n`;
-      msg += `📌 *DETALLES DEL EVENTO*\n`;
-      msg += `• Evento: ${textoEvento}\n`;
-      if (telefono) msg += `• WhatsApp de contacto: ${telefono}\n`;
-      if (fecha) msg += `• Fecha: ${fecha}\n`;
-      if (salon) msg += `• Salón / Lugar: ${salon}\n`;
-      if (personas) msg += `• Cantidad de personas: ${personas}\n`;
-      msg += `\n📌 *RESUMEN DE COBERTURA*\n`;
-      msg += `• Cobertura: ${textoCobertura}\n`;
-      msg += detallesEspecificos;
-
-      msg += `\n💰 *VALORES ESTIMADOS*\n`;
-      msg += `• Total de Lista: ${totalARS} ${totalUSD}\n`;
-      msg += `• Contado / Transferencia: ${totalEfectivo}\n`;
-      if (resumenSinInteresTexto) {
-        msg += resumenSinInteresTexto;
-      }
-      msg += `\n_Cotización calculada con Dólar Oficial de referencia ($${cotizacionDolar})._`;
-
-      mensajeWhatsAppInterno = msg;
-    }
-
-    function calcular() {
-      let subtotalBaseUSD = 0;
-      let adicionalesSumUSD = 0;
-
-      if (tipoEvento === 'graduacion') {
-        const cantGraduados = parseInt(gradQtyInput.value) || 0;
-        
-        let tarifaGraduadoHora = 40;
-        if (horas === 10) tarifaGraduadoHora = 50;
-        if (horas === 12) tarifaGraduadoHora = 60;
-
-        if (tipoCobertura === 'ambos') {
-          tarifaGraduadoHora *= 2;
-        }
-
-        let tarifaOpcionesGraduado = 0;
-        document.querySelectorAll('.btn-grad-opt').forEach(btn => {
-          if (btn.classList.contains('bg-amber-400')) {
-            let val = parseInt(btn.getAttribute('data-val')) || 4;
-            if (tipoCobertura === 'ambos') val *= 2;
-            tarifaOpcionesGraduado += val;
-          }
-        });
-
-        subtotalBaseUSD = cantGraduados * (tarifaGraduadoHora + tarifaOpcionesGraduado);
-
-        if (extraExpressUSD > 0) adicionalesSumUSD += 8;
-        if (extraLiveUSD > 0) adicionalesSumUSD += 12;
-        if (extraDroneUSD > 0) adicionalesSumUSD += 4;
-
-      } else {
-        const extraSesionesUSD = sesiones * TARIFA_SESION_USD;
-        subtotalBaseUSD = (tarifaPorHoraUSD * horas) + extraSesionesUSD + extraFotoUSD + extraVideoUSD;
-        adicionalesSumUSD = extraExpressUSD + extraLiveUSD + extraDroneUSD;
-      }
-
-      const totalUSD = subtotalBaseUSD + adicionalesSumUSD;
-      const totalListaARS = totalUSD * cotizacionDolar;
-
-      totalArsEl.textContent = `$${Math.round(totalListaARS).toLocaleString('es-AR')} ARS`;
-      totalUsdEl.textContent = `(USD $${totalUSD})`;
-
-      const resumenSinInteresTexto = calcularFinanciacion(totalListaARS);
-      generarMensajeWhatsApp(resumenSinInteresTexto);
-    }
-
-    btnEvs.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const targetBtn = e.target.closest('.btn-ev');
-        if (!targetBtn) return;
-        btnEvs.forEach(b => resaltarBotonActivo(b, false));
-        resaltarBotonActivo(targetBtn, true);
-        tipoEvento = targetBtn.getAttribute('data-ev');
-
-        if (tipoEvento === 'graduacion') {
-          gradWrap.classList.remove('hidden');
-          equipmentOptions.classList.add('hidden');
-          sessionOptions.classList.add('hidden');
-        } else {
-          gradWrap.classList.add('hidden');
-          equipmentOptions.classList.remove('hidden');
-          sessionOptions.classList.remove('hidden');
-        }
-
-        actualizarDisponibilidad();
-        calcular();
-      });
-    });
-
-    gradQtyInput.addEventListener('input', calcular);
-
-    document.querySelectorAll('.btn-grad-opt').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const targetBtn = e.target.closest('.btn-grad-opt');
-        if (!targetBtn) return;
-        const estaActivo = targetBtn.classList.contains('bg-amber-400');
-        resaltarBotonActivo(targetBtn, !estaActivo);
-        calcular();
-      });
-    });
-
-    btnCobs.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const targetBtn = e.target.closest('.btn-cob');
-        if (!targetBtn) return;
-        btnCobs.forEach(b => resaltarBotonActivo(b, false));
-        resaltarBotonActivo(targetBtn, true);
-        tarifaPorHoraUSD = parseInt(targetBtn.getAttribute('data-tarifa'));
-        tipoCobertura = targetBtn.getAttribute('data-tipo');
-        actualizarDisponibilidad();
-        calcular();
-      });
-    });
-
-    btnHrs.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const targetBtn = e.target.closest('.btn-hr');
-        if (!targetBtn) return;
-        btnHrs.forEach(b => resaltarBotonActivo(b, false));
-        resaltarBotonActivo(targetBtn, true);
-        horas = parseInt(targetBtn.getAttribute('data-horas'));
-        calcular();
-      });
-    });
-
-    btnSes.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const targetBtn = e.target.closest('.btn-ses');
-        if (!targetBtn) return;
-        const valSesion = parseInt(targetBtn.getAttribute('data-sesiones'));
-
-        if (tipoCobertura === 'ambos' && valSesion === 1) return;
-
-        btnSes.forEach(b => resaltarBotonActivo(b, false));
-        resaltarBotonActivo(targetBtn, true);
-        sesiones = valSesion;
-        calcular();
-      });
-    });
-
-    btnXPhoto.addEventListener('click', () => {
-      if (tipoCobertura === 'video') return;
-      const activo = !btnXPhoto.classList.contains('bg-amber-400');
-      resaltarBotonActivo(btnXPhoto, activo);
-      extraFotoUSD = activo ? parseInt(btnXPhoto.getAttribute('data-val')) : 0;
-      calcular();
-    });
-
-    btnXVideo.addEventListener('click', () => {
-      if (tipoCobertura === 'foto') return;
-      const activo = !btnXVideo.classList.contains('bg-amber-400');
-      resaltarBotonActivo(btnXVideo, activo);
-      extraVideoUSD = activo ? parseInt(btnXVideo.getAttribute('data-val')) : 0;
-      calcular();
-    });
-
-    btnExpress.addEventListener('click', () => {
-      if (tipoCobertura === 'video') return;
-      const activo = !btnExpress.classList.contains('bg-amber-400');
-      resaltarBotonActivo(btnExpress, activo);
-      extraExpressUSD = activo ? parseInt(btnExpress.getAttribute('data-val')) : 0;
-      calcular();
-    });
-
-    btnLive.addEventListener('click', () => {
-      if (tipoCobertura === 'foto') return;
-      const activo = !btnLive.classList.contains('bg-amber-400');
-      resaltarBotonActivo(btnLive, activo);
-      extraLiveUSD = activo ? parseInt(btnLive.getAttribute('data-val')) : 0;
-      calcular();
-    });
-
-    btnDrone.addEventListener('click', () => {
-      if (tipoCobertura === 'foto') return;
-      const activo = !btnDrone.classList.contains('bg-amber-400');
-      resaltarBotonActivo(btnDrone, activo);
-      extraDroneUSD = activo ? parseInt(btnDrone.getAttribute('data-val')) : 0;
-      calcular();
-    });
-
-    clientNameInput.addEventListener('input', () => generarMensajeWhatsApp());
-    clientPhoneInput.addEventListener('input', () => generarMensajeWhatsApp());
-    eventDateInput.addEventListener('input', () => generarMensajeWhatsApp());
-    venueNameInput.addEventListener('input', () => generarMensajeWhatsApp());
-    guestCountInput.addEventListener('input', () => generarMensajeWhatsApp());
-
-    btnWhatsapp.addEventListener('click', () => {
-      const text = encodeURIComponent(mensajeWhatsAppInterno);
-      const url = `https://wa.me/5493492591128?text=${text}`;
-      window.open(url, '_blank', 'noopener,noreferrer');
-    });
-
-    window.addEventListener('load', () => {
-      const activarBotonInicial = (grupo) => {
-        const primero = grupo[0];
-        if (primero) {
-          resaltarBotonActivo(primero, true);
-        }
-      };
-
-      activarBotonInicial(btnEvs);
-      activarBotonInicial(btnCobs);
-      activarBotonInicial(btnHrs);
-      activarBotonInicial(btnSes);
-
-      document.querySelectorAll('.btn-grad-opt, .btn-eq, .btn-add').forEach(b => {
-        resaltarBotonActivo(b, false);
-      });
-      actualizarDisponibilidad();
-      
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-
-      obtenerDolar();
-    });
-  </script>
+<script src="main.js"></script>
 </body>
 </html>

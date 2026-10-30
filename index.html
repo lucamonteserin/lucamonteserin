@@ -97,12 +97,10 @@ tailwind.config = {
       <a class="nav-link" href="galeria">Galería</a>
       <a class="nav-link" href="equipo">Equipo</a>
       <a class="nav-link" href="#presupuesto-seccion">Presupuesto</a>
-      <a class="nav-link" href="#contacto">Contacto</a>
     </nav>
 
-    <!-- Botón Cotizar y Menú Móvil -->
+    <!-- Menú Móvil Botón -->
     <div class="flex items-center gap-3 z-10 ml-auto lg:ml-0">
-      <a href="#presupuesto-seccion" class="btn btn-glow hidden sm:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 rounded-full"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
       <button id="menu-btn" class="lg:hidden p-2 text-slate-200 rounded-full hover:bg-white/5" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
     </div>
   </div>
@@ -111,9 +109,7 @@ tailwind.config = {
     <a href="#proyectos" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Destacados</a>
     <a href="galeria" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Galería</a>
     <a href="equipo" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Equipo</a>
-    <a href="#presupuesto-seccion" class="block py-2 text-slate-200 hover:text-gold-400 border-b border-white/5">Presupuesto</a>
-    <a href="#contacto" class="block py-2 text-slate-200 hover:text-gold-400">Contacto</a>
-    <a href="#presupuesto-seccion" class="flex justify-center items-center gap-2 w-full py-3 text-xs font-bold text-warm-950 bg-gold-400 rounded-full shadow-lg"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
+    <a href="#presupuesto-seccion" class="block py-2 text-slate-200 hover:text-gold-400">Presupuesto</a>
   </nav>
 </header>
 
@@ -144,63 +140,62 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-14 reveal">
       <h2 class="text-3xl sm:text-5xl font-semibold tracking-tight text-white mb-4">Historias para volver a vivir</h2>
-      <p class="text-slate-300 text-sm">Una selección de celebraciones reales, capturadas en fotografía y video.</p>
     </div>
     
     <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <button type="button" class="card standard-item reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="quince" data-full="https://cdn.picflow.com/assets/images/resized/1920x1282/fa8c4fd5-0ea0-4fb6-b5de-c2b2411df6ca.jpg" data-title="XV Geraldine" data-desc="Cobertura de Fotografía">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/fa8c4fd5-0ea0-4fb6-b5de-c2b2411df6ca.jpg" alt="XV Geraldine" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/xvgera" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/fa8c4fd5-0ea0-4fb6-b5de-c2b2411df6ca.jpg" alt="XV Geraldine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Quinceaños</span><h3 class="text-xl font-bold text-white mt-2">XV Geraldine</h3><p class="text-xs text-slate-300 mt-1">Book + Previas + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">XV GERALDINE</h3></div>
+      </a>
 
-      <button type="button" class="card standard-item reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="quince" data-full="https://cdn.picflow.com/assets/images/resized/1920x1280/9677b423-0791-42c7-b9e5-a99c6784d29b.jpg" data-title="XV Catalina" data-desc="Entrada triunfal y tanda de baile 4K">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/9677b423-0791-42c7-b9e5-a99c6784d29b.jpg" alt="XV Catalina" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/xvcata" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/9677b423-0791-42c7-b9e5-a99c6784d29b.jpg" alt="XV Cata" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Quinceaños</span><h3 class="text-xl font-bold text-white mt-2">XV Catalina</h3><p class="text-xs text-slate-300 mt-1">Book</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">XV CATA</h3></div>
+      </a>
 
-      <button type="button" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="quince" data-full="https://cdn.picflow.com/assets/images/resized/1920x1280/71e223c0-7fbd-4b2d-b14e-8f84e005a30e.jpg" data-title="XV Martina" data-desc="Producción audiovisual previa">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/71e223c0-7fbd-4b2d-b14e-8f84e005a30e.jpg" alt="XV Martina" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/xvmartina" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/71e223c0-7fbd-4b2d-b14e-8f84e005a30e.jpg" alt="XV Martina" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto + Video · Quinceaños</span><h3 class="text-xl font-bold text-white mt-2">XV Martina</h3><p class="text-xs text-slate-300 mt-1">Book + Previas + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">XV MARTINA</h3></div>
+      </a>
 
-      <button type="button" class="card standard-item reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="bodas" data-full="https://cdn.picflow.com/assets/images/resized/1920x1282/d4d58354-d5b2-4339-8f9f-d5020d298a51.jpg" data-title="Ago & Fran" data-desc="Cobertura completa de foto y video">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/d4d58354-d5b2-4339-8f9f-d5020d298a51.jpg" alt="Ago & Fran" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/agoyfran" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/d4d58354-d5b2-4339-8f9f-d5020d298a51.jpg" alt="Agos & Fran" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Aniversario</span><h3 class="text-xl font-bold text-white mt-2">Ago & Fran</h3><p class="text-xs text-slate-300 mt-1">Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">Agos & Fran</h3></div>
+      </a>
 
-      <button type="button" class="card standard-item reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="bodas" data-full="https://cdn.picflow.com/assets/images/resized/1920x1282/f0a1cf7f-9d97-4826-b784-9ea0214a73cb.jpg" data-title="Dai & Pablo" data-desc="Book + Fiesta">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/f0a1cf7f-9d97-4826-b784-9ea0214a73cb.jpg" alt="Dai & Pablo" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/daiypablo" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/f0a1cf7f-9d97-4826-b784-9ea0214a73cb.jpg" alt="Dai & Pablo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Boda</span><h3 class="text-xl font-bold text-white mt-2">Dai & Pablo</h3><p class="text-xs text-slate-300 mt-1">Book + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">Dai & Pablo</h3></div>
+      </a>
 
-      <button type="button" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="bodas" data-full="https://cdn.picflow.com/assets/images/resized/1280x1920/e9e9477d-0f40-45f0-8ac5-3b3f902b4778.jpg" data-title="Facu & Luci" data-desc="Book + Previas + Fiesta">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1280x1920/e9e9477d-0f40-45f0-8ac5-3b3f902b4778.jpg" alt="Facu & Luci" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/facuyluci" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1280x1920/e9e9477d-0f40-45f0-8ac5-3b3f902b4778.jpg" alt="Facu & Luci" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto + video · Boda</span><h3 class="text-xl font-bold text-white mt-2">Facu & Luci</h3><p class="text-xs text-slate-300 mt-1">Book + Previas + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">Facu & Luci</h3></div>
+      </a>
 
-      <button type="button" class="card standard-item reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="graduaciones" data-full="https://cdn.picflow.com/assets/images/resized/1920x1280/a3994a59-c48e-4a19-8bbb-d6c838c217ee.jpg" data-title="Ataliva 2026" data-desc="Gala de egresados y bajada">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/a3994a59-c48e-4a19-8bbb-d6c838c217ee.jpg" alt="Ataliva 2026" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/ataliva2026" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/a3994a59-c48e-4a19-8bbb-d6c838c217ee.jpg" alt="Ataliva 2026" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto + video · Graduación</span><h3 class="text-xl font-bold text-white mt-2">Villa San José 2025</h3><p class="text-xs text-slate-300 mt-1">Book + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">Ataliva 2026</h3></div>
+      </a>
 
-      <button type="button" class="card standard-item reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="graduaciones" data-full="https://cdn.picflow.com/assets/images/resized/1920x1280/4f9d2884-ca8a-41d6-963a-d7d25563fcec.jpg" data-title="Promo San José 2026" data-desc="Entrega de diplomas y fiesta">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/4f9d2884-ca8a-41d6-963a-d7d25563fcec.jpg" alt="Promo San José 2026" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/villasanjose2025" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1280/4f9d2884-ca8a-41d6-963a-d7d25563fcec.jpg" alt="Villa San José 2025" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto + video · Graduación</span><h3 class="text-xl font-bold text-white mt-2">Colegio Misericordia</h3><p class="text-xs text-slate-300 mt-1">Book + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">Villa San José 2025</h3></div>
+      </a>
 
-      <button type="button" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left" data-cat="graduaciones" data-full="https://cdn.picflow.com/assets/images/resized/1920x1282/cf169899-471f-4e0d-a7a5-92f284d0eee4.jpg" data-title="Colegio Nacional" data-desc="Retratos individuales y fiesta">
-        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/cf169899-471f-4e0d-a7a5-92f284d0eee4.jpg" alt="Colegio Nacional" class="w-full h-full object-cover"></div>
+      <a href="https://lucamonteserin.picflow.com/misericordia2025" target="_blank" rel="noopener noreferrer" class="card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 text-left block">
+        <div class="aspect-video overflow-hidden"><img loading="lazy" decoding="async" src="https://cdn.picflow.com/assets/images/resized/1920x1282/cf169899-471f-4e0d-a7a5-92f284d0eee4.jpg" alt="Colegio Misericordia" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 p-6"><span class="text-[11px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto + video · Graduación</span><h3 class="text-xl font-bold text-white mt-2">Ataliva 2026</h3><p class="text-xs text-slate-300 mt-1">Book + Fiesta</p></div>
-      </button>
+        <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white">Colegio Misericordia</h3></div>
+      </a>
     </div>
 
     <div class="mt-16 text-center reveal">
@@ -410,7 +405,7 @@ tailwind.config = {
           <div id="container-sin-interes" class="space-y-2 border-t border-white/10 sm:border-zinc-800/60 pt-3 sm:pt-2.5"></div>
         </div>
 
-        <div id="contacto" class="bg-white/5 sm:bg-zinc-950/80 border border-white/10 sm:border-zinc-800 rounded-2xl p-6 sm:p-5 backdrop-blur-md sm:backdrop-blur-none space-y-4 shadow-lg">
+        <div class="bg-white/5 sm:bg-zinc-950/80 border border-white/10 sm:border-zinc-800 rounded-2xl p-6 sm:p-5 backdrop-blur-md sm:backdrop-blur-none space-y-4 shadow-lg">
           <h3 class="text-sm font-bold flex items-center gap-2 text-zinc-200">
             <i data-lucide="send" class="w-4 h-4 text-emerald-400"></i>
             Enviar Presupuesto
@@ -482,15 +477,6 @@ tailwind.config = {
     </div>
   </div>
 </footer>
-
-<div id="lightbox" tabindex="-1" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/95 backdrop-blur-xl" role="dialog" aria-modal="true" aria-labelledby="lb-title" aria-describedby="lb-desc">
-  <button id="lb-close" class="absolute top-6 right-6 p-3 text-white bg-white/10 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-colors" aria-label="Cerrar"><i data-lucide="x" class="w-6 h-6"></i></button>
-  <div class="max-w-5xl w-full flex flex-col items-center">
-    <img id="lb-img" src="" alt="" class="max-h-[75vh] w-auto object-contain rounded-2xl shadow-2xl border border-white/10">
-    <h3 id="lb-title" class="text-2xl font-bold text-white mt-6 mb-1"></h3>
-    <p id="lb-desc" class="text-sm text-slate-300 text-center"></p>
-  </div>
-</div>
 
 <div id="toast" role="status" class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 px-5 py-4 rounded-2xl glass-panel border border-gold-500/30 text-white text-sm shadow-2xl"><i data-lucide="check-circle" class="w-4 h-4 text-gold-400"></i><span id="toast-msg"></span></div>
 

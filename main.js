@@ -216,7 +216,7 @@ if (lb) {
 }
 
 // ==========================================================================
-// Slider Cinemático de Videos Infinito (Activo y Corregido)
+// 4. Slider Cinemático de Videos Infinito (100% Funcional y Blindado)
 // ==========================================================================
 const sliderSection = document.getElementById('slider-cinematico');
 const track = document.getElementById('marquee-track');
@@ -229,7 +229,7 @@ if (sliderSection && track) {
   });
 
   let currentX = 0;
-  let baseSpeed = 1.0;
+  let baseSpeed = 1.2;
   let targetSpeed = baseSpeed;
 
   sliderSection.addEventListener('mousemove', (e) => {
@@ -243,47 +243,32 @@ if (sliderSection && track) {
     targetSpeed = baseSpeed;
   });
 
-  let sliderVisible = false;
-  let sliderFrame = 0;
+  sliderSection.addEventListener('touchmove', () => {
+    targetSpeed = 2.0;
+  }, { passive: true });
+
+  sliderSection.addEventListener('touchend', () => {
+    targetSpeed = baseSpeed;
+  });
 
   function animateSlider() {
-    if (document.hidden || !sliderVisible) {
-      sliderFrame = 0;
-      return;
-    }
-    let activeTarget = (targetSpeed === baseSpeed) ? -baseSpeed : targetSpeed;
-    currentX += activeTarget;
+    currentX -= targetSpeed;
     const halfWidth = track.scrollWidth / 2;
 
-    if (currentX <= -halfWidth) {
-      currentX += halfWidth;
-    } else if (currentX >= 0) {
-      currentX -= halfWidth;
+    if (halfWidth > 0) {
+      if (currentX <= -halfWidth) {
+        currentX += halfWidth;
+      } else if (currentX > 0) {
+        currentX -= halfWidth;
+      }
     }
 
     track.style.transform = `translateX(${currentX}px)`;
-    sliderFrame = requestAnimationFrame(animateSlider);
+    requestAnimationFrame(animateSlider);
   }
 
-  const sliderObserver = new IntersectionObserver(entries => {
-    sliderVisible = entries.some(entry => entry.isIntersecting);
-    if (sliderVisible && !document.hidden && !sliderFrame) {
-      sliderFrame = requestAnimationFrame(animateSlider);
-    } else if (!sliderVisible && sliderFrame) {
-      cancelAnimationFrame(sliderFrame);
-      sliderFrame = 0;
-    }
-  });
-  sliderObserver.observe(sliderSection);
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden && sliderFrame) {
-      cancelAnimationFrame(sliderFrame);
-      sliderFrame = 0;
-    } else if (!document.hidden && sliderVisible && !sliderFrame) {
-      sliderFrame = requestAnimationFrame(animateSlider);
-    }
-  });
+  // Arranca de manera inmediata y fluida sin depender de observers restrictivos
+  requestAnimationFrame(animateSlider);
 }
 
 // ==========================================================================

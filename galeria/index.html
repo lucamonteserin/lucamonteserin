@@ -128,7 +128,7 @@ tailwind.config = {
     <div class="text-center max-w-5xl mx-auto mb-14 reveal">
       <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-8">Galería Completa</h1>
 
-      <!-- Contenedor de botones con igual ancho (grid de 4 columnas) -->
+      <!-- 4 botones con idéntico ancho -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto" role="group" aria-label="Categorías de galería">
         
         <button class="opt filter-btn w-full py-3 px-4 rounded-2xl text-xs tracking-wider bg-gold-400 text-warm-950 font-bold transition-all shadow-lg border border-gold-500/30 text-center flex items-center justify-center" data-filter="quinceanos">Quinceaños</button>
@@ -137,7 +137,7 @@ tailwind.config = {
         
         <button class="opt filter-btn w-full py-3 px-4 rounded-2xl text-xs tracking-wider bg-warm-900/80 backdrop-blur-md text-slate-300 hover:text-white border border-white/10 hover:border-gold-500/30 transition-all shadow-lg text-center flex items-center justify-center" data-filter="graduaciones">Graduaciones</button>
         
-        <!-- Botón Otros con contenedor parent group y un padding superior invisible (pt-2) para evitar que se cierre al pasar el mouse -->
+        <!-- Botón Otros con pt-2 invisible para evitar que se cierre al pasar el cursor -->
         <div class="relative group w-full">
           <button id="otros-dropdown-btn" class="opt filter-btn w-full py-3 px-4 rounded-2xl text-xs tracking-wider bg-warm-900/80 backdrop-blur-md text-slate-300 hover:text-white border border-white/10 hover:border-gold-500/30 transition-all shadow-lg flex items-center justify-center gap-2" data-filter="otros">
             Otros <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
@@ -315,19 +315,19 @@ tailwind.config = {
       </a>
 
       <!-- Bodas -->
-      <a href="https://lucamonteserin.picflow.com/folder/xv" target="_blank" rel="noopener noreferrer" class="gallery-card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer block shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/30" data-category="bodas">
+      <a href="https://lucamonteserin.picflow.com/folder/xv" target="_blank" rel="noopener noreferrer" class="gallery-card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer block shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/30" data-category="bodas" style="display: none;">
         <div class="aspect-video overflow-hidden relative"><img src="https://cdn.picflow.com/assets/images/resized/1920x1282/f0a1cf7f-9d97-4826-b784-9ea0214a73cb.jpg" alt="Ago & Fran" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/30 to-transparent"></div></div>
         <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Ago & Fran</h3></div>
       </a>
 
       <!-- Graduaciones -->
-      <a href="https://lucamonteserin.picflow.com/folder/xv" target="_blank" rel="noopener noreferrer" class="gallery-card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer block shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/30" data-category="graduaciones">
+      <a href="https://lucamonteserin.picflow.com/folder/xv" target="_blank" rel="noopener noreferrer" class="gallery-card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer block shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/30" data-category="graduaciones" style="display: none;">
         <div class="aspect-video overflow-hidden relative"><img src="https://cdn.picflow.com/assets/images/resized/1920x1280/4f9d2884-ca8a-41d6-963a-d7d25563fcec.jpg" alt="Ataliva 2026" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/30 to-transparent"></div></div>
         <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Ataliva 2026</h3></div>
       </a>
 
       <!-- Otros -->
-      <a href="https://lucamonteserin.picflow.com/folder/xv" target="_blank" rel="noopener noreferrer" class="gallery-card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer block shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/30" data-category="otros" data-subcategory="bautismos">
+      <a href="https://lucamonteserin.picflow.com/folder/xv" target="_blank" rel="noopener noreferrer" class="gallery-card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer block shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/30" data-category="otros" data-subcategory="bautismos" style="display: none;">
         <div class="aspect-video overflow-hidden relative"><img src="https://cdn.picflow.com/assets/images/resized/1920x1280/9677b423-0791-42c7-b9e5-a99c6784d29b.jpg" alt="Bautismo Bauti" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/30 to-transparent"></div></div>
         <div class="absolute bottom-0 inset-x-0 p-6"><h3 class="text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Bautismo Bauti</h3></div>
       </a>
@@ -373,24 +373,12 @@ tailwind.config = {
   </div>
 </footer>
 
-  <!-- Script para filtrado, selección aleatoria de 9 álbumes y menú desplegable -->
+  <!-- Script para filtrado y menú desplegable -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const filterBtns = document.querySelectorAll('.filter-btn');
       const subFilterBtns = document.querySelectorAll('.sub-filter');
-      const cards = Array.from(document.querySelectorAll('.gallery-card'));
-
-      function showRandomNine() {
-        // Ocultar todas las tarjetas primero
-        cards.forEach(card => card.style.display = 'none');
-        
-        // Mezclar aleatoriamente el array de tarjetas
-        const shuffled = [...cards].sort(() => 0.5 - Math.random());
-        
-        // Tomar exactamente 9 y mostrarlas
-        const selected = shuffled.slice(0, 9);
-        selected.forEach(card => card.style.display = 'block');
-      }
+      const cards = document.querySelectorAll('.gallery-card');
 
       function filterGallery(category, subcategory = null) {
         cards.forEach(card => {
@@ -446,8 +434,8 @@ tailwind.config = {
         });
       });
 
-      // Al cargar por primera vez la página, se muestran 9 álbumes aleatorios
-      showRandomNine();
+      // Mostrar por defecto la categoría de Quinceaños al cargar
+      filterGallery('quinceanos');
     });
   </script>
 

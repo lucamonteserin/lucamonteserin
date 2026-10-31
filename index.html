@@ -81,7 +81,6 @@ tailwind.config = {
 </script>
 </head>
 <body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
-<a href="#main" class="skip" data-target="#main">Saltar al contenido</a>
 
 <!-- Header con fondo transparente dinámico -->
 <header id="main-header" class="fixed top-0 z-40 w-full bg-transparent border-b border-transparent transition-all duration-500">
@@ -109,16 +108,16 @@ tailwind.config = {
 
   <nav class="flex flex-col items-center space-y-6 text-center max-w-lg px-6">
     <a href="#proyectos" data-target="#proyectos" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Destacados</a>
-    <a href="galeria" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Galería</a>
-    <a href="equipo" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Equipo</a>
+    <a href="galeria/" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Galería</a>
+    <a href="equipo/" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Equipo</a>
     <a href="#presupuesto-seccion" data-target="#presupuesto-seccion" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Presupuesto</a>
 
     <div class="w-16 h-px bg-white/10 my-4"></div>
 
     <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-2">
-      <a href="galeria?cat=quince" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Quinceaños</a>
-      <a href="galeria?cat=bodas" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Bodas</a>
-      <a href="galeria?cat=graduaciones" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Graduaciones</a>
+      <a href="galeria/?cat=quince" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Quinceaños</a>
+      <a href="galeria/?cat=bodas" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Bodas</a>
+      <a href="galeria/?cat=graduaciones" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Graduaciones</a>
     </div>
   </nav>
 </div>
@@ -137,21 +136,18 @@ tailwind.config = {
   <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
     <div id="hero-content" class="transition-opacity duration-200 ease-out flex flex-col items-center">
       
-      <!-- Título.svg con max-w-4xl (20% más grande) y espaciado ajustado -->
       <h1 id="hero-title" class="w-full max-w-4xl mb-3.5">
         <img src="titulo.svg" alt="Fotografía y filmación para tu gran noche" class="w-full h-auto object-contain drop-shadow-lg" />
       </h1>
       
-      <!-- Subtítulo con interlineado y margen ajustados -->
       <p class="max-w-xl text-sm sm:text-base text-white/85 leading-relaxed mb-4">QUINCEAÑOS, BODAS Y GRADUACIONES</p>
       
-      <!-- Botones con espaciado reducido un 50% y altura compacta -->
       <div class="mt-1 flex flex-row items-center justify-center gap-1.5 sm:gap-2 w-full max-w-md">
         <a href="#presupuesto-seccion" data-target="#presupuesto-seccion" class="btn btn-glow flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 flex items-center justify-center gap-2 shadow-lg">
           <i data-lucide="calculator" style="width: 20px !important; height: 20px !important; min-width: 20px;" class="pointer-events-none"></i>
           <span>Presupuestar</span>
         </a>
-        <a href="galeria" class="btn flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-2 shadow-lg">
+        <a href="galeria/" class="btn flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-2 shadow-lg">
           <i data-lucide="grid" style="width: 20px !important; height: 20px !important; min-width: 20px;" class="text-gold-400 pointer-events-none"></i>
           <span>Ver galería</span>
         </a>
@@ -224,7 +220,7 @@ tailwind.config = {
     </div>
 
     <div class="mt-16 text-center reveal">
-      <a href="galeria" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
+      <a href="galeria/" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
         <i data-lucide="layers" class="w-4 h-4"></i>
         <span>Ver galería completa</span>
       </a>
@@ -232,7 +228,7 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- Slider de Videos Infinito (Reparado) -->
+<!-- Slider de Videos Infinito -->
 <section id="slider-cinematico" class="relative w-full py-0 my-0 bg-warm-950 overflow-hidden z-20 select-none">
   <div class="absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-warm-950 to-transparent z-20 pointer-events-none"></div>
   <div class="absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-warm-950 to-transparent z-20 pointer-events-none"></div>
@@ -449,7 +445,6 @@ tailwind.config = {
               </div>
               <div>
                 <label for="event-date" class="block text-xs text-zinc-400 mb-1">Fecha del evento:</label>
-                <!-- Input de fecha corregido con w-full y padding exacto simétrico -->
                 <input type="date" id="event-date" class="w-full p-3 sm:p-2.5 rounded-xl bg-warm-900 sm:bg-zinc-900 border border-white/10 sm:border-zinc-700 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400">
               </div>
             </div>
@@ -483,7 +478,6 @@ tailwind.config = {
     <div class="text-sm text-gray-400 order-3 md:order-1 text-center md:text-left">
       <p>Luca Monteserin · Fotógrafo & Filmmaker &copy; <span id="current-year">2026</span></p>
     </div>
-    <!-- Logo del footer redirigido al inicio -->
     <div class="flex justify-center order-1 md:order-2">
       <a href="#hero" data-target="#hero" class="inline-block group" aria-label="Luca Monteserin · Fotógrafo & Filmmaker, volver al inicio">
         <img src="logo.svg" alt="Logo Luca Monteserin · Fotógrafo & Filmmaker" class="h-10 sm:h-12 w-auto object-contain mx-auto transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">

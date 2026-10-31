@@ -83,8 +83,8 @@
 <body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
 <a href="#main" class="skip">Saltar al contenido</a>
 
-<!-- Header idéntico al de galería / index -->
-<header id="main-header" class="fixed top-0 z-40 w-full bg-warm-950/85 backdrop-blur-md border-b border-white/10 transition-all duration-500">
+<!-- Header idéntico y con transparencia/desenfoque exacto de galería -->
+<header id="main-header" class="fixed top-0 z-40 w-full bg-warm-950/80 backdrop-blur-md border-b border-white/10 transition-all duration-500">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
     
     <!-- Logo centrado redirigido al inicio -->
@@ -126,7 +126,7 @@
 <main id="main" class="flex-grow pt-32 pb-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
-    <!-- Encabezado de la página idéntico en distancias a galería -->
+    <!-- Encabezado de la página -->
     <div class="text-center max-w-5xl mx-auto mb-14 reveal">
       <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-8">
         Nuestro Equipo
@@ -134,7 +134,7 @@
     </div>
 
     <!-- SECCIÓN DE LAS 5 TARJETAS DE PROFESIONALES -->
-    <div class="mb-28">
+    <div class="mb-24">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         
         <!-- 1. Mauricio Kunz (Desktop: 1 / Móvil: 3) -->
@@ -230,41 +230,8 @@
       </div>
     </div>
 
-    <!-- SECCIÓN INFERIOR: Enfoque Integrado -->
-    <div class="border-t border-white/10 pt-20">
-      <div class="max-w-3xl mx-auto text-center reveal">
-        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-          Un enfoque cinematográfico en Fotografía & Filmación
-        </h2>
-        <p class="text-slate-300 text-base leading-relaxed mb-6">
-          Unificar tus fotos y tu video bajo una misma dirección garantiza coherencia estética en los tonos, espontaneidad en las expresiones y tranquilidad total para disfrutar tu fiesta sin interrupciones.
-        </p>
-        <p class="text-slate-300 text-base leading-relaxed mb-12">
-          No forzamos situaciones ni imponemos poses acartonadas. Acompañamos el ritmo orgánico de la celebración para retratar emociones reales tal como sucedieron.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-          <div class="flex items-start gap-4 p-6 rounded-3xl glass-panel">
-            <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="camera" class="w-5 h-5"></i></div>
-            <div>
-              <h3 class="font-bold text-white text-base">Fotografía espontánea</h3>
-              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Capturamos emociones genuinas, risas espontáneas y los detalles que hacen único tu evento, sin poses forzadas.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4 p-6 rounded-3xl glass-panel">
-            <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="video" class="w-5 h-5"></i></div>
-            <div>
-              <h3 class="font-bold text-white text-base">Cine y filmación</h3>
-              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Movimientos orgánicos, gradación de color cinematográfico y mezcla de audio ambiental envolvente.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- APARTADO INICIAL IDÉNTICO AL DE GALERÍA -->
-    <div class="mt-24 text-center border-t border-white/10 pt-16 reveal">
+    <div class="text-center border-t border-white/10 pt-16 reveal">
       <h3 class="text-2xl sm:text-4xl font-bold text-white mb-4">¿Querés que estemos en tu evento?</h3>
       <p class="text-slate-300 text-sm max-w-lg mx-auto mb-8">Armá tu presupuesto personalizado en tiempo real y cotizá tu cobertura al instante.</p>
       <a href="index.html#presupuesto-seccion" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
@@ -304,11 +271,33 @@
   </div>
 </footer>
 
+<!-- Script unificado para asegurar el funcionamiento del menú hamburguesa -->
 <script src="main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
+  }
+
+  // Lógica del menú móvil integrada para asegurar su funcionamiento
+  const menuBtn = document.getElementById('menu-btn');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const fullscreenMenu = document.getElementById('fullscreen-menu');
+
+  if (menuBtn && fullscreenMenu) {
+    menuBtn.addEventListener('click', () => {
+      fullscreenMenu.classList.remove('hidden');
+      fullscreenMenu.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (closeMenuBtn && fullscreenMenu) {
+    closeMenuBtn.addEventListener('click', () => {
+      fullscreenMenu.classList.add('hidden');
+      fullscreenMenu.classList.remove('flex');
+      document.body.style.overflow = '';
+    });
   }
 });
 </script>

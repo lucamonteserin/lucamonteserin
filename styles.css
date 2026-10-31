@@ -160,7 +160,7 @@ transform: scale(1);
 }
 
 #hero-title img {
-max-width: 750px !important;
+max-width: 900px !important; /* <--- Actualizado a 900px (20% más grande) */
 width: 100% !important;
 height: auto !important;
 filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.28));

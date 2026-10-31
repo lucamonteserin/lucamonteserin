@@ -83,8 +83,8 @@
 <body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
 <a href="#main" class="skip">Saltar al contenido</a>
 
-<!-- Header con URLs limpias -->
-<header id="main-header" class="fixed top-0 z-40 w-full bg-warm-950/80 backdrop-blur-md border-b border-white/10 transition-all duration-500">
+<!-- Header idéntico al de galería / index -->
+<header id="main-header" class="fixed top-0 z-40 w-full bg-warm-950/85 backdrop-blur-md border-b border-white/10 transition-all duration-500">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
     
     <!-- Logo centrado redirigido al inicio -->
@@ -101,7 +101,7 @@
   </div>
 </header>
 
-<!-- Menú Overlay a pantalla completa con rutas limpias -->
+<!-- Menú Overlay a pantalla completa idéntico al de galería -->
 <div id="fullscreen-menu" aria-label="Navegación principal" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-warm-950/95 backdrop-blur-2xl transition-all duration-300">
   <button id="close-menu-btn" type="button" class="absolute top-6 right-6 sm:top-8 sm:right-10 p-3 text-slate-200 hover:text-gold-400 hover:bg-white/5 rounded-full transition-all focus:outline-none cursor-pointer" aria-label="Cerrar menú">
     <i data-lucide="x" class="w-8 h-8 pointer-events-none"></i>
@@ -126,14 +126,14 @@
 <main id="main" class="flex-grow pt-32 pb-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
-    <!-- Encabezado de la página -->
-    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-      <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-6 leading-tight">
+    <!-- Encabezado de la página idéntico en distancias a galería -->
+    <div class="text-center max-w-5xl mx-auto mb-14 reveal">
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-8">
         Nuestro Equipo
       </h1>
     </div>
 
-    <!-- SECCIÓN DE LAS 5 TARJETAS DE PROFESIONALES (Las 5 en una sola fila en desktop con lg:grid-cols-5) -->
+    <!-- SECCIÓN DE LAS 5 TARJETAS DE PROFESIONALES -->
     <div class="mb-28">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         
@@ -230,7 +230,7 @@
       </div>
     </div>
 
-    <!-- SECCIÓN INFERIOR: Enfoque Integrado (Sin la foto individual repetida) -->
+    <!-- SECCIÓN INFERIOR: Enfoque Integrado -->
     <div class="border-t border-white/10 pt-20">
       <div class="max-w-3xl mx-auto text-center reveal">
         <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6 leading-tight">
@@ -261,19 +261,22 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="mt-20 text-center reveal">
-        <a href="index.html#presupuesto-seccion" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
-          <i data-lucide="calculator" class="w-4 h-4"></i>
-          <span>Armar presupuesto para tu evento</span>
-        </a>
-      </div>
+    <!-- APARTADO INICIAL IDÉNTICO AL DE GALERÍA -->
+    <div class="mt-24 text-center border-t border-white/10 pt-16 reveal">
+      <h3 class="text-2xl sm:text-4xl font-bold text-white mb-4">¿Querés que estemos en tu evento?</h3>
+      <p class="text-slate-300 text-sm max-w-lg mx-auto mb-8">Armá tu presupuesto personalizado en tiempo real y cotizá tu cobertura al instante.</p>
+      <a href="index.html#presupuesto-seccion" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
+        <i data-lucide="calculator" class="w-4 h-4"></i>
+        <span>Armar presupuesto</span>
+      </a>
     </div>
 
   </div>
 </main>
 
-<!-- Footer limpio -->
+<!-- Footer idéntico al de galería -->
 <footer class="relative z-20 w-full border-t border-amber-500/10 bg-warm-950 py-8">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6">
     <div class="text-sm text-gray-400 order-3 md:order-1 text-center md:text-left">

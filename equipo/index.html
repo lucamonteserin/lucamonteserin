@@ -89,7 +89,7 @@
     
     <!-- Logo centrado redirigido al inicio -->
     <a href="index.html#hero" data-target="#hero" class="absolute left-1/2 -translate-x-1/2 group flex-shrink-0 z-10" aria-label="Luca Monteserin, volver al inicio">
-      <img src="../logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
+      <img src="logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
 
     <!-- Botón de Menú a la derecha -->
@@ -137,145 +137,131 @@
       </p>
     </div>
 
-    <!-- SECCIÓN DE LAS 5 TARJETAS DE PROFESIONALES -->
+    <!-- SECCIÓN DE LAS 5 TARJETAS DE PROFESIONALES (Las 5 en una sola fila en desktop con lg:grid-cols-5) -->
     <div class="mb-28">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         
-        <!-- 1. Mauricio Kunz (Orden web: 1 / Móvil: 3) -->
-        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-1 lg:order-1 md:order-1 sm:order-3">
-          <div class="aspect-[4/5] sm:aspect-[4/5] lg:aspect-[4/5] [div.sm\:aspect-video]:aspect-video lg:[aspect-ratio:4/5] overflow-hidden relative">
-            <!-- Contenedor dinámico adaptativo para alternar 16:9 en móvil y 4:3 / 4:5 en desktop -->
+        <!-- 1. Mauricio Kunz (Desktop: 1 / Móvil: 3) -->
+        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-1 lg:order-1 sm:order-3">
+          <div class="overflow-hidden relative">
             <div class="w-full h-full aspect-[16/9] sm:aspect-[4/5]">
-              <img src="../mauriciokunz.jpg" alt="Mauricio Kunz" class="w-full h-full object-cover">
+              <img src="mauriciokunz.jpg" alt="Mauricio Kunz" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
           </div>
-          <div class="p-6 flex-grow flex flex-col justify-between">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div>
-              <h3 class="text-xl font-bold text-white mb-1">Mauricio Kunz</h3>
-              <p class="text-xs text-gold-400 font-semibold mb-3">Fotografía & Edición de Fotografía</p>
+              <h3 class="text-lg font-bold text-white mb-1">Mauricio Kunz</h3>
+              <p class="text-[11px] text-gold-400 font-semibold mb-2">Fotografía & Edición</p>
               <p class="text-xs text-slate-300 leading-relaxed">Especialista en captura y postproducción fotográfica con atención minuciosa en la estética visual.</p>
             </div>
-            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-6 block">Fotografía</span>
+            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-4 block">Fotografía</span>
           </div>
         </div>
 
-        <!-- 2. Juan Bonazza (Orden web: 2 / Móvil: 4) -->
-        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-2 lg:order-2 md:order-2 sm:order-4">
+        <!-- 2. Juan Bonazza (Desktop: 2 / Móvil: 4) -->
+        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-2 lg:order-2 sm:order-4">
           <div class="overflow-hidden relative">
             <div class="w-full h-full aspect-[16/9] sm:aspect-[4/5]">
-              <img src="../juanpablobonazza.jpeg" alt="Juan Bonazza" class="w-full h-full object-cover">
+              <img src="juanpablobonazza.jpeg" alt="Juan Bonazza" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
           </div>
-          <div class="p-6 flex-grow flex flex-col justify-between">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div>
-              <h3 class="text-xl font-bold text-white mb-1">Juan Bonazza</h3>
-              <p class="text-xs text-gold-400 font-semibold mb-3">Filmación & Edición de Videos</p>
+              <h3 class="text-lg font-bold text-white mb-1">Juan Bonazza</h3>
+              <p class="text-[11px] text-gold-400 font-semibold mb-2">Filmación & Edición</p>
               <p class="text-xs text-slate-300 leading-relaxed">Especialista en captura cinematográfica, rodaje y montaje audiovisual dinámico para eventos.</p>
             </div>
-            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-6 block">Filmación & Edición</span>
+            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-4 block">Filmación & Edición</span>
           </div>
         </div>
 
-        <!-- 3. Luca Monteserin (Orden web: 3 / Móvil: 1 - Primero en móvil) -->
-        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-3 lg:order-3 md:order-3 sm:order-1 -order-1 sm:order-none">
+        <!-- 3. Luca Monteserin (Desktop: 3 / Móvil: 1 - Primero en móvil) -->
+        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-3 lg:order-3 sm:order-1 -order-1 sm:order-none">
           <div class="overflow-hidden relative">
             <div class="w-full h-full aspect-[16/9] sm:aspect-[4/5]">
-              <img src="../lucamonteserin.jpg" alt="Luca Monteserin" class="w-full h-full object-cover">
+              <img src="lucamonteserin.jpg" alt="Luca Monteserin" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
           </div>
-          <div class="p-6 flex-grow flex flex-col justify-between">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div>
-              <h3 class="text-xl font-bold text-white mb-1">Luca Monteserin</h3>
-              <p class="text-xs text-gold-400 font-semibold mb-3">Fotografía, Filmmaker & Edición General</p>
+              <h3 class="text-lg font-bold text-white mb-1">Luca Monteserin</h3>
+              <p class="text-[11px] text-gold-400 font-semibold mb-2">PH, Filmmaker & Edición</p>
               <p class="text-xs text-slate-300 leading-relaxed">Dirección general, captura en fotografía y cine, encargándose de la edición integral de ambos rubros.</p>
             </div>
-            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-6 block">Dirección Integral</span>
+            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-4 block">Dirección Integral</span>
           </div>
         </div>
 
-        <!-- 4. Verónica Venegas (Orden web: 4 / Móvil: 2) -->
-        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-4 lg:order-4 md:order-4 sm:order-2">
+        <!-- 4. Verónica Venegas (Desktop: 4 / Móvil: 2) -->
+        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-4 lg:order-4 sm:order-2">
           <div class="overflow-hidden relative">
             <div class="w-full h-full aspect-[16/9] sm:aspect-[4/5]">
-              <img src="../veronicabenegas.heic" alt="Vero Benegas" class="w-full h-full object-cover">
+              <img src="veronicabenegas.heic" alt="Vero Benegas" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
           </div>
-          <div class="p-6 flex-grow flex flex-col justify-between">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div>
-              <h3 class="text-xl font-bold text-white mb-1">Verónica Venegas</h3>
-              <p class="text-xs text-gold-400 font-semibold mb-3">Fotografía & Edición de Fotografía</p>
+              <h3 class="text-lg font-bold text-white mb-1">Verónica Venegas</h3>
+              <p class="text-[11px] text-gold-400 font-semibold mb-2">Fotografía & Edición</p>
               <p class="text-xs text-slate-300 leading-relaxed">Encargada de retratar emociones, detalles ambientales y secuencias clave de la celebración.</p>
             </div>
-            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-6 block">Fotografía</span>
+            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-4 block">Fotografía</span>
           </div>
         </div>
 
-        <!-- 5. Nicolás Acosta (Orden web: 5 / Móvil: 5) -->
-        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-5 lg:order-5 md:order-5 sm:order-5">
+        <!-- 5. Nicolás Acosta (Desktop: 5 / Móvil: 5) -->
+        <div class="glass-panel rounded-3xl overflow-hidden reveal flex flex-col border border-white/5 hover:border-gold-500/30 transition-all duration-300 order-5 lg:order-5 sm:order-5">
           <div class="overflow-hidden relative">
             <div class="w-full h-full aspect-[16/9] sm:aspect-[4/5]">
-              <img src="../nicolasacosta.jpg" alt="Nico Acosta" class="w-full h-full object-cover">
+              <img src="nicolasacosta.jpg" alt="Nico Acosta" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
           </div>
-          <div class="p-6 flex-grow flex flex-col justify-between">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div>
-              <h3 class="text-xl font-bold text-white mb-1">Nicolás Acosta</h3>
-              <p class="text-xs text-gold-400 font-semibold mb-3">Filmación & Edición de Videos</p>
+              <h3 class="text-lg font-bold text-white mb-1">Nicolás Acosta</h3>
+              <p class="text-[11px] text-gold-400 font-semibold mb-2">Filmación & Edición</p>
               <p class="text-xs text-slate-300 leading-relaxed">Especialista en cobertura de video, despliegue escénico y montaje de piezas cinematográficas.</p>
             </div>
-            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-6 block">Filmación & Edición</span>
+            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest mt-4 block">Filmación & Edición</span>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- SECCIÓN INFERIOR: Enfoque Integrado -->
+    <!-- SECCIÓN INFERIOR: Enfoque Integrado (Sin la foto individual repetida) -->
     <div class="border-t border-white/10 pt-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-            Un enfoque integrado para <br><span class="gold-text">tu fotografía y tu video</span>
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed mb-6">
-            Unificar tus fotos y tu video bajo una misma dirección garantiza coherencia estética en los tonos, espontaneidad en las expresiones y tranquilidad total para disfrutar tu fiesta sin interrupciones.
-          </p>
-          <p class="text-slate-300 text-base leading-relaxed mb-8">
-            No forzamos situaciones ni imponemos poses acartonadas. Acompañamos el ritmo orgánico de la celebración para retratar emociones reales tal como sucedieron.
-          </p>
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6 leading-tight">
+          Un enfoque integrado para <span class="gold-text">tu fotografía y tu video</span>
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed mb-6">
+          Unificar tus fotos y tu video bajo una misma dirección garantiza coherencia estética en los tonos, espontaneidad en las expresiones y tranquilidad total para disfrutar tu fiesta sin interrupciones.
+        </p>
+        <p class="text-slate-300 text-base leading-relaxed mb-12">
+          No forzamos situaciones ni imponemos poses acartonadas. Acompañamos el ritmo orgánico de la celebración para retratar emociones reales tal como sucedieron.
+        </p>
 
-          <div class="space-y-4">
-            <div class="flex items-start gap-4 p-5 rounded-3xl glass-panel">
-              <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="camera" class="w-5 h-5"></i></div>
-              <div>
-                <h3 class="font-bold text-white text-base">Fotografía espontánea</h3>
-                <p class="text-sm text-slate-300 mt-1 leading-relaxed">Capturamos emociones genuinas, risas espontáneas y los detalles que hacen único tu evento, sin poses forzadas.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4 p-5 rounded-3xl glass-panel">
-              <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="video" class="w-5 h-5"></i></div>
-              <div>
-                <h3 class="font-bold text-white text-base">Cine y filmación</h3>
-                <p class="text-sm text-slate-300 mt-1 leading-relaxed">Movimientos orgánicos, gradación de color cinematográfico y mezcla de audio ambiental envolvente.</p>
-              </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+          <div class="flex items-start gap-4 p-6 rounded-3xl glass-panel">
+            <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="camera" class="w-5 h-5"></i></div>
+            <div>
+              <h3 class="font-bold text-white text-base">Fotografía espontánea</h3>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Capturamos emociones genuinas, risas espontáneas y los detalles que hacen único tu evento, sin poses forzadas.</p>
             </div>
           </div>
-        </div>
 
-        <div class="reveal">
-          <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
-            <img src="foto.png" alt="Luca Monteserin" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-transparent to-transparent"></div>
-            <figure class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-2xl">
-              <blockquote class="text-sm text-gold-300 font-medium">"Sincronizamos la mirada fotográfica y cinematográfica para contar historias auténticas."</blockquote>
-              <figcaption class="text-xs text-slate-300 tracking-widest mt-2">Luca Monteserin · Dirección Audiovisual</figcaption>
-            </figure>
+          <div class="flex items-start gap-4 p-6 rounded-3xl glass-panel">
+            <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="video" class="w-5 h-5"></i></div>
+            <div>
+              <h3 class="font-bold text-white text-base">Cine y filmación</h3>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Movimientos orgánicos, gradación de color cinematográfico y mezcla de audio ambiental envolvente.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -299,7 +285,7 @@
     </div>
     <div class="flex justify-center order-1 md:order-2">
       <a href="index.html#hero" data-target="#hero" class="inline-block group" aria-label="Luca Monteserin · Fotógrafo & Filmmaker, volver al inicio">
-        <img src="../logo.svg" alt="Logo Luca Monteserin · Fotógrafo & Filmmaker" class="h-10 sm:h-12 w-auto object-contain mx-auto transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">
+        <img src="logo.svg" alt="Logo Luca Monteserin · Fotógrafo & Filmmaker" class="h-10 sm:h-12 w-auto object-contain mx-auto transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">
       </a>
     </div>
     <div class="flex items-center justify-center md:justify-end gap-3 order-2 md:order-3">

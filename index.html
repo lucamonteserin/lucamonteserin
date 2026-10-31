@@ -137,19 +137,21 @@ tailwind.config = {
   <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
     <div id="hero-content" class="transition-opacity duration-200 ease-out flex flex-col items-center">
       
-      <!-- Título con el SVG original intacto -->
-      <h1 id="hero-title" class="w-full max-w-3xl mb-5">
+      <!-- Título.svg con max-w-4xl (20% más grande) y espaciado ajustado -->
+      <h1 id="hero-title" class="w-full max-w-4xl mb-3.5">
         <img src="titulo.svg" alt="Fotografía y filmación para tu gran noche" class="w-full h-auto object-contain drop-shadow-lg" />
       </h1>
-      <p class="max-w-xl text-sm sm:text-base text-white/85 leading-relaxed mb-6">QUINCEAÑOS, BODAS Y GRADUACIONES</p>
       
-      <!-- Botones principales con los iconos emparejados a w-4 h-4 -->
-      <div class="mt-2 flex flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md">
-        <a href="#presupuesto-seccion" data-target="#presupuesto-seccion" class="btn btn-glow flex-1 px-6 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 flex items-center justify-center gap-2 shadow-lg">
+      <!-- Subtítulo con interlineado y margen ajustados -->
+      <p class="max-w-xl text-sm sm:text-base text-white/85 leading-relaxed mb-4">QUINCEAÑOS, BODAS Y GRADUACIONES</p>
+      
+      <!-- Botones con espaciado reducido un 50% y altura compacta -->
+      <div class="mt-1 flex flex-row items-center justify-center gap-1.5 sm:gap-2 w-full max-w-md">
+        <a href="#presupuesto-seccion" data-target="#presupuesto-seccion" class="btn btn-glow flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 flex items-center justify-center gap-2 shadow-lg">
           <i data-lucide="calculator" style="width: 20px !important; height: 20px !important; min-width: 20px;" class="pointer-events-none"></i>
           <span>Presupuestar</span>
         </a>
-        <a href="galeria" class="btn flex-1 px-6 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-2 shadow-lg">
+        <a href="galeria" class="btn flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center gap-2 shadow-lg">
           <i data-lucide="grid" style="width: 20px !important; height: 20px !important; min-width: 20px;" class="text-gold-400 pointer-events-none"></i>
           <span>Ver galería</span>
         </a>

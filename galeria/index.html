@@ -15,11 +15,11 @@
   <title>Luca Monteserin · Fotógrafo & Filmmaker</title>
   <meta name="description" content="Servicio integral de Fotografía y Filmación de Quinceaños, Bodas y Graduaciones. Descubrí trabajos recientes y armá una cotización para tu evento. ¿Planeamos el tuyo?">
   <meta name="theme-color" content="#11100e">
-  <link rel="canonical" href="https://www.lucamonteserin.com.ar/galeria">
+  <link rel="canonical" href="https://www.lucamonteserin.com.ar/galeria/">
   
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.lucamonteserin.com.ar/galeria">
+  <meta property="og:url" content="https://www.lucamonteserin.com.ar/galeria/">
   <meta property="og:title" content="Galería Completa · Luca Monteserin">
   <meta property="og:description" content="Explorá nuestros proyectos destacados, quinceaños, bodas, graduaciones y más.">
   <meta property="og:image" content="https://www.lucamonteserin.com.ar/portada.jpg">
@@ -81,14 +81,13 @@ tailwind.config = {
 </script>
 </head>
 <body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
-<a href="#full-gallery" class="skip">Saltar al contenido</a>
 
-<!-- Header idéntico al de index.html -->
-<header id="main-header" class="fixed top-0 z-40 w-full bg-warm-950/80 backdrop-blur-md border-b border-white/10 transition-all duration-500">
+<!-- Header transparente dinámico al hacer scroll -->
+<header id="main-header" class="fixed top-0 z-40 w-full bg-transparent border-b border-transparent transition-all duration-500">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 relative">
     
-    <!-- Logo centrado redirigido al inicio -->
-    <a href="../index.html#hero" data-target="#hero" class="absolute left-1/2 -translate-x-1/2 group flex-shrink-0 z-10" aria-label="Luca Monteserin, volver al inicio">
+    <!-- Logo centrado limpio -->
+    <a href="/#hero" class="absolute left-1/2 -translate-x-1/2 group flex-shrink-0 z-10" aria-label="Luca Monteserin, volver al inicio">
       <img src="../logo.svg" alt="Logo Luca Monteserin" class="h-10 sm:h-12 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"/>
     </a>
 
@@ -101,24 +100,24 @@ tailwind.config = {
   </div>
 </header>
 
-<!-- Menú Overlay a pantalla completa idéntico -->
+<!-- Menú Overlay a pantalla completa con navegación limpia -->
 <div id="fullscreen-menu" aria-label="Navegación principal" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-warm-950/95 backdrop-blur-2xl transition-all duration-300">
   <button id="close-menu-btn" type="button" class="absolute top-6 right-6 sm:top-8 sm:right-10 p-3 text-slate-200 hover:text-gold-400 hover:bg-white/5 rounded-full transition-all focus:outline-none cursor-pointer" aria-label="Cerrar menú">
     <i data-lucide="x" class="w-8 h-8 pointer-events-none"></i>
   </button>
 
   <nav class="flex flex-col items-center space-y-6 text-center max-w-lg px-6">
-    <a href="../index.html#proyectos" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Destacados</a>
-    <a href="../galeria" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Galería</a>
-    <a href="../equipo" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Equipo</a>
-    <a href="../#presupuesto-seccion" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Presupuesto</a>
+    <a href="/#proyectos" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Destacados</a>
+    <a href="./" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Galería</a>
+    <a href="../equipo/" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Equipo</a>
+    <a href="/#presupuesto-seccion" class="menu-nav-link text-2xl sm:text-3xl font-light text-slate-200 hover:text-gold-400 transition-colors tracking-widest uppercase">Presupuesto</a>
 
     <div class="w-16 h-px bg-white/10 my-4"></div>
 
     <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-2">
-      <a href="index.html?cat=quince" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Quinceaños</a>
-      <a href="index.html?cat=bodas" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Bodas</a>
-      <a href="index.html?cat=graduaciones" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Graduaciones</a>
+      <a href="./?cat=quince" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Quinceaños</a>
+      <a href="./?cat=bodas" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Bodas</a>
+      <a href="./?cat=graduaciones" class="menu-nav-link text-sm font-semibold tracking-widest text-gold-400 border border-gold-400/30 px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-all">Graduaciones</a>
     </div>
   </nav>
 </div>
@@ -401,7 +400,7 @@ tailwind.config = {
     <div class="mt-24 text-center border-t border-white/10 pt-16 reveal">
       <h3 class="text-2xl sm:text-4xl font-bold text-white mb-4">¿Querés que estemos en tu evento?</h3>
       <p class="text-slate-300 text-sm max-w-lg mx-auto mb-8">Armá tu presupuesto personalizado en tiempo real y cotizá tu cobertura al instante.</p>
-      <a href="../#presupuesto-seccion" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
+      <a href="/#presupuesto-seccion" class="btn btn-glow inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
         <i data-lucide="calculator" class="w-4 h-4"></i>
         <span>Armar presupuesto</span>
       </a>
@@ -410,14 +409,13 @@ tailwind.config = {
   </div>
 </main>
 
-<!-- Footer idéntico al de index.html -->
 <footer class="relative z-20 w-full border-t border-amber-500/10 bg-warm-950 py-8">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6">
     <div class="text-sm text-gray-400 order-3 md:order-1 text-center md:text-left">
       <p>Luca Monteserin · Fotógrafo & Filmmaker &copy; <span id="current-year">2026</span></p>
     </div>
     <div class="flex justify-center order-1 md:order-2">
-      <a href="../index.html#hero" data-target="#hero" class="inline-block group" aria-label="Luca Monteserin · Fotógrafo & Filmmaker, volver al inicio">
+      <a href="/#hero" class="inline-block group" aria-label="Luca Monteserin · Fotógrafo & Filmmaker, volver al inicio">
         <img src="../logo.svg" alt="Logo Luca Monteserin · Fotógrafo & Filmmaker" class="h-10 sm:h-12 w-auto object-contain mx-auto transition-all duration-500 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">
       </a>
     </div>
@@ -502,13 +500,42 @@ tailwind.config = {
     });
   </script>
 
-  <script src="../main.js"></script>
+  <!-- Script para el efecto scroll transparente del header -->
   <script>
-    window.addEventListener('load', () => {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        header.classList.add('bg-warm-950/80', 'backdrop-blur-md', 'border-white/10');
+        header.classList.remove('bg-transparent', 'border-transparent');
+      } else {
+        header.classList.remove('bg-warm-950/80', 'backdrop-blur-md', 'border-white/10');
+        header.classList.add('bg-transparent', 'border-transparent');
       }
     });
+
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const fullscreenMenu = document.getElementById('fullscreen-menu');
+
+    if (menuBtn && fullscreenMenu) {
+      menuBtn.addEventListener('click', () => {
+        fullscreenMenu.classList.remove('hidden');
+        fullscreenMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    if (closeMenuBtn && fullscreenMenu) {
+      closeMenuBtn.addEventListener('click', () => {
+        fullscreenMenu.classList.add('hidden');
+        fullscreenMenu.classList.remove('flex');
+        document.body.style.overflow = '';
+      });
+    }
+  });
   </script>
+
+  <script src="../main.js"></script>
 </body>
 </html>
